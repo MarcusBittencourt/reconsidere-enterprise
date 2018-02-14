@@ -1,5 +1,7 @@
+import { element } from 'protractor';
 import { Component, OnInit } from '@angular/core';
 import { NgModule } from '@angular/core';
+import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
 
 @Component({
   selector: 'app-measurements',
@@ -8,9 +10,30 @@ import { NgModule } from '@angular/core';
 })
 export class MeasurementsComponent implements OnInit {
 
-  constructor() { }
+  measurement = null;
+  measurements$: AngularFireList<any[]>;
+
+  constructor(private af: AngularFireDatabase) { }
 
   ngOnInit() {
+    this.measurement = {
+      date: new Date(),
+      materials: [
+        { id: 'papper', name: 'Papel', unity_of_measure: 'kg', quantity: 0 },
+        { id: 'metal', name: 'Metal', unity_of_measure: 'kg', quantity: 0 },
+        { id: 'plastic', name: 'Plastico', unity_of_measure: 'kg', quantity: 0 },
+        { id: 'glass', name: 'Vidro', unity_of_measure: 'kg', quantity: 0 },
+        { id: 'eletronic', name: 'Eletrônico', unity_of_measure: 'kg', quantity: 0 },
+        { id: 'organic', name: 'Orgânico', unity_of_measure: 'kg', quantity: 0 }
+    ]};
+  }
+
+  save() {
+    this.measurements$ = this.af.list('/companies/eowyn/measurements');
+    this.measurements$.push(this.measurement);
+  }
+
+  discard() {
   }
 
 }

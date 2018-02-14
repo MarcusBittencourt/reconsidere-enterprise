@@ -1,3 +1,18 @@
-<p>
-  Realize a medição!
-</p>
+<mat-list style="max-width: 100%">
+  <mat-toolbar>
+    <h1 mat-subheader>Materiais</h1>
+    <button (click)="save()">
+      <mat-icon>save</mat-icon>
+    </button>
+    <button (click)="discard()">
+      <mat-icon>cancel</mat-icon>
+    </button>
+  </mat-toolbar>
+  <mat-divider></mat-divider>
+  <mat-list-item *ngFor="let material of measurement.materials">
+    <mat-icon mat-list-icon>home</mat-icon>
+    <h2 mat-line>{{material.name}}</h2>
+    <p mat-line>{{material.quantity}} {{material.unity_of_measure}}</p>
+    <mat-slider thumbLabel tickInterval="1" step="0.5" max="1000" value="1.5" [(ngModel)]="material.quantity" width="800"></mat-slider>
+  </mat-list-item>
+</mat-list>
