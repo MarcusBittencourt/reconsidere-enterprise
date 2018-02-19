@@ -16,6 +16,11 @@ import { AngularFireDatabase } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { UpdatesComponent } from './updates/updates.component';
 import {MatCardModule} from '@angular/material/card';
+import {MatTooltipModule} from '@angular/material/tooltip';
+import {MatMenuModule} from '@angular/material/menu';
+import {MatTabsModule} from '@angular/material/tabs';
+import {MatStepperModule} from '@angular/material/stepper';
+import { ChartsModule } from 'ng2-charts';
 
 @NgModule({
   declarations: [
@@ -35,6 +40,11 @@ import {MatCardModule} from '@angular/material/card';
     MatCardModule,
     AngularFireAuthModule,
     AngularFireModule,
+    MatTooltipModule,
+    MatMenuModule,
+    MatTabsModule,
+    ChartsModule,
+    MatStepperModule,
     AngularFireModule.initializeApp(environment.firebase)
   ],
   providers: [AngularFireDatabase],

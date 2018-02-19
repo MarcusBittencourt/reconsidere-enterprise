@@ -17,7 +17,7 @@ export class MeasurementsComponent implements OnInit {
 
   ngOnInit() {
     this.measurement = {
-      date: new Date(),
+      date: new Date().toJSON(),
       materials: [
         { id: 'papper', name: 'Papel', unity_of_measure: 'kg', quantity: 0 },
         { id: 'metal', name: 'Metal', unity_of_measure: 'kg', quantity: 0 },
@@ -29,6 +29,10 @@ export class MeasurementsComponent implements OnInit {
   }
 
   save() {
+    this.measurement.weighing = this.measurement.materials
+      .map(material => material.quantity)
+      .reduce((sum, current) => sum + current);
+
     this.measurements$ = this.af.list('/companies/eowyn/measurements');
     this.measurements$.push(this.measurement);
   }

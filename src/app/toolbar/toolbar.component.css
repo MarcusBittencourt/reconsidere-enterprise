@@ -5,3 +5,11 @@
 .toolbar-spacer {
   flex: 1 1 auto;
 }
+
+.tab-group {
+  border: 0px;
+}
+
+.tab-content {
+  padding: 16px;
+}
