@@ -1,16 +1,14 @@
-import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-updates',
-  templateUrl: './updates.component.html',
-  styleUrls: ['./updates.component.css']
+  selector: 'app-widgets',
+  templateUrl: './widgets.component.html',
+  styleUrls: ['./widgets.component.css']
 })
-export class UpdatesComponent implements OnInit {
+export class WidgetsComponent implements OnInit {
 
-  last_updates$: any;
+  constructor() { }
 
-  constructor(private af: AngularFireDatabase) { }
 
   public barChartOptions: any = {
     scaleShowVerticalLines: false,
@@ -18,8 +16,8 @@ export class UpdatesComponent implements OnInit {
   };
 
   public barChartLabels: string[] = ['Materiais'];
-  public barChartType: string = 'bar';
-  public barChartLegend: boolean = true;
+  public barChartType: 'bar';
+  public barChartLegend: true;
 
   public barChartData: any[] = [
     {data: [65, 59, 80, 81, 56, 55, 40], label: 'Papel'},
@@ -40,7 +38,6 @@ export class UpdatesComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.last_updates$ = this.af.list('/companies/eowyn/measurements').valueChanges();
   }
 
 }

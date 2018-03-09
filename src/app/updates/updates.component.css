@@ -1,4 +1,16 @@
 mat-card {
-  box-sizing: border-box;
-  display: inline-block;
+  margin-bottom: 25px;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+button {
+  background-color: Transparent;
+  background-repeat:no-repeat;
+  border: none;
+  cursor:pointer;
+  overflow: hidden;
+  outline:none;
 }

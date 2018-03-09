@@ -21,13 +21,19 @@ import {MatMenuModule} from '@angular/material/menu';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatStepperModule} from '@angular/material/stepper';
 import { ChartsModule } from 'ng2-charts';
+import { StartcenterComponent } from './startcenter/startcenter.component';
+import { NoticesComponent } from './notices/notices.component';
+import { WidgetsComponent } from './widgets/widgets.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MeasurementsComponent,
     ToolbarComponent,
-    UpdatesComponent
+    UpdatesComponent,
+    StartcenterComponent,
+    NoticesComponent,
+    WidgetsComponent
   ],
   imports: [
     BrowserModule,
