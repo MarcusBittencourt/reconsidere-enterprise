@@ -23,6 +23,12 @@ import {MatStepperModule} from '@angular/material/stepper';
 import { ChartsModule } from 'ng2-charts';
 import { StartcenterComponent } from './startcenter/startcenter.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ProfileComponent } from './profile/profile.component';
+import { RouterModule, Routes } from '@angular/router';
+import { ROUTING } from './app.routing';
+import { APP_BASE_HREF } from '@angular/common';
+import { DashboardComponent } from './dashboard/dashboard.component';
+
 
 @NgModule({
   declarations: [
@@ -31,6 +37,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ToolbarComponent,
     UpdatesComponent,
     StartcenterComponent,
+    ProfileComponent,
+    DashboardComponent,
   ],
   imports: [
     BrowserAnimationsModule,
@@ -49,9 +57,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MatTabsModule,
     ChartsModule,
     MatStepperModule,
-    AngularFireModule.initializeApp(environment.firebase)
+    AngularFireModule.initializeApp(environment.firebase),
+    ROUTING
   ],
-  providers: [AngularFireDatabase],
+  providers: [AngularFireDatabase, {provide: APP_BASE_HREF, useValue: '/' }],
   bootstrap: [AppComponent]
 })
 export class AppModule {

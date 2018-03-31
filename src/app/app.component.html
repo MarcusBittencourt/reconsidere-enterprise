@@ -1,24 +1,2 @@
 <app-toolbar></app-toolbar>
-<mat-tab-group>
-  <mat-tab label="Central">
-    <app-startcenter></app-startcenter>
-  </mat-tab>
-
-  <mat-tab label="Medição">
-    <mat-grid-list cols="2" rowHeight="1:1">
-      <mat-grid-tile layout-align="left">
-        <app-measurements></app-measurements>
-      </mat-grid-tile>
-      <mat-grid-tile layout-align="left">
-        <app-updates></app-updates>
-      </mat-grid-tile>
-    </mat-grid-list>
-  </mat-tab>
-
-  <mat-tab label="Agendamento">
-
-  </mat-tab>
-  <mat-tab label="Coleta">
-
-  </mat-tab>
-</mat-tab-group>
+<router-outlet></router-outlet>

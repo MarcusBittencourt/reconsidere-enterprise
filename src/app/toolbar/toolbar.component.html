@@ -1,11 +1,18 @@
 <mat-toolbar>
   <mat-toolbar-row>
-    Reconsidere
+    <p>Reconsidere</p>
     <span class="toolbar-spacer"></span>
-    <div mat-card-avatar src="http://indiabiz4u.com/detail_reviews.php?id=725" [matMenuTriggerFor]="menu"></div>
+    <mat-icon routerLink="" routerLinkActive="active">home</mat-icon>
+    <mat-icon [matMenuTriggerFor]="menu">menu</mat-icon>
     <mat-menu #menu="matMenu">
-      <button mat-menu-item>Configurações</button>
-      <button mat-menu-item>Perfil</button>
+      <button mat-menu-item routerLink="/configuration" routerLinkActive="active">
+        <mat-icon>build</mat-icon>
+        Configurações
+      </button>
+      <button mat-menu-item routerLink="/profile" routerLinkActive="active">
+        <mat-icon>account_box</mat-icon>
+        Perfil
+      </button>
     </mat-menu>
   </mat-toolbar-row>
 </mat-toolbar>
