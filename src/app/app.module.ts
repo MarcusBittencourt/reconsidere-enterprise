@@ -28,7 +28,11 @@ import { RouterModule, Routes } from '@angular/router';
 import { ROUTING } from './app.routing';
 import { APP_BASE_HREF } from '@angular/common';
 import { DashboardComponent } from './dashboard/dashboard.component';
-
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+import {MatSelectModule} from '@angular/material/select';
+import {MatDividerModule} from '@angular/material/divider';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatRadioModule} from '@angular/material/radio';
 
 @NgModule({
   declarations: [
@@ -55,7 +59,12 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     MatTooltipModule,
     MatMenuModule,
     MatTabsModule,
+    MatSelectModule,
+    MatSlideToggleModule,
+    MatDividerModule,
+    MatRadioModule,
     ChartsModule,
+    MatFormFieldModule,
     MatStepperModule,
     AngularFireModule.initializeApp(environment.firebase),
     ROUTING

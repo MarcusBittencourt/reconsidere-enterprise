@@ -1,18 +1,4 @@
-mat-card {
-  margin-bottom: 25px;
-}
-
-mat-slider {
-  width: 300px;
-}
-
-.toolbar-spacer {
-  flex: 1 1 auto;
-}
-
 .container {
-  height: 600px;
-  overflow-y: scroll;
+  width: 30%;
 }
-
 

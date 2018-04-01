@@ -18,8 +18,8 @@ export class UpdatesComponent implements OnInit {
   };
 
   public barChartLabels: string[] = ['Materiais'];
-  public barChartType: string = 'bar';
-  public barChartLegend: boolean = true;
+  public barChartType: 'bar';
+  public barChartLegend: true;
 
   public barChartData: any[] = [
     {data: [65, 59, 80, 81, 56, 55, 40], label: 'Papel'},
