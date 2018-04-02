@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
 import { StartcenterComponent } from '../startcenter/startcenter.component';
 import { Profile } from '../../models/profile';
 import { AngularFireDatabase, AngularFireList, AngularFireObject } from 'angularfire2/database';

@@ -1,0 +1,21 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Melhores pré-selecionados</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+      <canvas baseChart
+      [datasets]="barChartData"
+      [labels]="barChartLabels"
+      [options]="barChartOptions"
+      [legend]="barChartLegend"
+      [chartType]="barChartType"
+      (chartHover)="chartHovered($event)"
+      (chartClick)="chartClicked($event)"></canvas>
+  </mat-card-content>
+  <mat-card-footer>
+    <p>
+      Apresenta as categorias que mais foram coletadas num período préfixado, ordenadas da maior coleta pra menor.
+    </p>
+  </mat-card-footer>
+  <mat-card-actions></mat-card-actions>
+</mat-card>

@@ -5,7 +5,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { MeasurementsComponent } from './measurements/measurements.component';
 import { MatSliderModule } from '@angular/material/slider';
-import { FormsModule } from '@angular/forms';
+import { FormsModule} from '@angular/forms';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { ToolbarComponent } from './toolbar/toolbar.component';
@@ -33,6 +33,12 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatRadioModule} from '@angular/material/radio';
+import { FooterComponent } from './footer/footer.component';
+import { ProdutionWidgetComponent } from './dashboard/prodution.widget.component';
+import { ContaminationWidgetComponent } from './dashboard/contamination.widget.component';
+import { PreselectionWidgetComponent } from './dashboard/preselection.widget.component';
+import { NextcollectionWidgetComponent } from './dashboard/nextcollection.widget.component';
+import { CultureWidgetComponent } from './dashboard/culture.widget.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +49,12 @@ import {MatRadioModule} from '@angular/material/radio';
     StartcenterComponent,
     ProfileComponent,
     DashboardComponent,
+    FooterComponent,
+    ProdutionWidgetComponent,
+    ContaminationWidgetComponent,
+    NextcollectionWidgetComponent,
+    PreselectionWidgetComponent,
+    CultureWidgetComponent
   ],
   imports: [
     BrowserAnimationsModule,
@@ -66,6 +78,11 @@ import {MatRadioModule} from '@angular/material/radio';
     ChartsModule,
     MatFormFieldModule,
     MatStepperModule,
+    ProdutionWidgetComponent,
+    ContaminationWidgetComponent,
+    NextcollectionWidgetComponent,
+    PreselectionWidgetComponent,
+    CultureWidgetComponent,
     AngularFireModule.initializeApp(environment.firebase),
     ROUTING
   ],

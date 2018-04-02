@@ -1,0 +1,19 @@
+<mat-card>
+  <mat-card-header>
+    Mapa de cultura e objetivos
+  </mat-card-header>
+  <mat-card-content>
+    <div style="display: block; width: 300px">
+      <canvas baseChart
+      [datasets]="radarChartData"
+      [labels]="radarChartLabels"
+      [chartType]="radarChartType"
+      (chartHover)="chartHovered($event)"
+      (chartClick)="chartClicked($event)"></canvas>
+    </div>
+  </mat-card-content>
+  <mat-card-footer>
+    Esse widget é responsável por informar o aculturamento relativo a carga de dados
+    de medições do reconsidere, para o contexto de uma empresa ou cidade e comparar com os objetivos definidos.
+  </mat-card-footer>
+</mat-card>
