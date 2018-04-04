@@ -2,16 +2,20 @@
   <mat-toolbar-row>
         <p>Reconsidere - Gestão Sustentável de Resíduos</p>
         <span class="toolbar-spacer"></span>
-        <mat-icon class="hi-icon" routerLink="" routerLinkActive="active">home</mat-icon>
+        <mat-icon class="hi-icon" routerLink="" routerLinkActive="active">dashboard</mat-icon>
         <mat-icon class="hi-icon" [matMenuTriggerFor]="menu">menu</mat-icon>
         <mat-menu #menu="matMenu">
           <button mat-menu-item routerLink="/admin" routerLinkActive="active">
-            <mat-icon>build</mat-icon>
+            <mat-icon>settings</mat-icon>
             Administração
           </button>
           <button mat-menu-item routerLink="/profile" routerLinkActive="active">
             <mat-icon>account_box</mat-icon>
             Perfil
+          </button>
+          <button mat-menu-item routerLink="/logout" routerLinkActive="active">
+            <mat-icon>dashboard</mat-icon>
+            Sair
           </button>
         </mat-menu>
       </mat-toolbar-row>
