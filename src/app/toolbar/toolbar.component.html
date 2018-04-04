@@ -1,19 +1,18 @@
 <mat-toolbar>
   <mat-toolbar-row>
-    <!--<img src="./assets/reconsidere-toolbar-logo.png"/>-->
-    <p>Reconsidere</p>
-    <span class="toolbar-spacer"></span>
-    <mat-icon routerLink="" routerLinkActive="active">home</mat-icon>
-    <mat-icon [matMenuTriggerFor]="menu">menu</mat-icon>
-    <mat-menu #menu="matMenu">
-      <button mat-menu-item routerLink="/admin" routerLinkActive="active">
-        <mat-icon>build</mat-icon>
-        Administração
-      </button>
-      <button mat-menu-item routerLink="/profile" routerLinkActive="active">
-        <mat-icon>account_box</mat-icon>
-        Perfil
-      </button>
-    </mat-menu>
-  </mat-toolbar-row>
-</mat-toolbar>
+        <p>Reconsidere - Gestão Sustentável de Resíduos</p>
+        <span class="toolbar-spacer"></span>
+        <mat-icon class="hi-icon" routerLink="" routerLinkActive="active">home</mat-icon>
+        <mat-icon class="hi-icon" [matMenuTriggerFor]="menu">menu</mat-icon>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item routerLink="/admin" routerLinkActive="active">
+            <mat-icon>build</mat-icon>
+            Administração
+          </button>
+          <button mat-menu-item routerLink="/profile" routerLinkActive="active">
+            <mat-icon>account_box</mat-icon>
+            Perfil
+          </button>
+        </mat-menu>
+      </mat-toolbar-row>
+    </mat-toolbar>

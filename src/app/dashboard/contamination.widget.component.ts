@@ -1,14 +1,20 @@
 import { Component, OnInit, NgModule } from '@angular/core';
+import { DefaultWidgetComponent } from './default.widget.component';
 
 @Component({
   // tslint:disable-next-line:component-selector
   selector: 'widget-contamination',
   templateUrl: './contamination.widget.component.html',
+  styleUrls: ['./default.widget.component.css']
 })
 @NgModule({})
-export class ContaminationWidgetComponent implements OnInit {
+export class ContaminationWidgetComponent implements OnInit, DefaultWidgetComponent {
 
-  constructor() { }
+  displayed: boolean;
+
+  constructor() {
+    this.displayed = true;
+   }
   // lineChart
   public lineChartData: Array<any> = [
     {data: [65, 59, 80, 81, 56, 55, 40], label: 'Papel'},

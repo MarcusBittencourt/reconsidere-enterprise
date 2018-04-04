@@ -1,9 +1,13 @@
 <mat-card>
   <mat-card-header>
-    Mapa de cultura e objetivos
+    <mat-card-title>
+      Mapa de cultura e objetivos
+    </mat-card-title>
+    <span class="title-spacer"></span>
+    <a href="#">Ocultar</a>
   </mat-card-header>
   <mat-card-content>
-    <div style="display: block; width: 300px">
+    <div style="display: block;">
       <canvas baseChart
       [datasets]="radarChartData"
       [labels]="radarChartLabels"
