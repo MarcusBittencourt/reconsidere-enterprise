@@ -29,7 +29,7 @@ export class CultureWidgetComponent implements OnInit {
     console.log(e);
   }
 
-    ngOnInit() {
-    }
+  ngOnInit() {
+  }
 
 }

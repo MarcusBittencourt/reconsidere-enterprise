@@ -1,4 +1,5 @@
-.card-container {
-  display: flex;
-  flex-wrap: nowrap;
+.dashboard-container {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  padding: 10px;
 }

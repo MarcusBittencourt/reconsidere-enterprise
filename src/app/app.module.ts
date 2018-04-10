@@ -39,6 +39,9 @@ import { ContaminationWidgetComponent } from './dashboard/contamination.widget.c
 import { PreselectionWidgetComponent } from './dashboard/preselection.widget.component';
 import { NextcollectionWidgetComponent } from './dashboard/nextcollection.widget.component';
 import { CultureWidgetComponent } from './dashboard/culture.widget.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { AdminComponent } from './admin/admin.component';
+import {MatTableModule} from '@angular/material/table';
 
 @NgModule({
   declarations: [
@@ -54,7 +57,8 @@ import { CultureWidgetComponent } from './dashboard/culture.widget.component';
     ContaminationWidgetComponent,
     NextcollectionWidgetComponent,
     PreselectionWidgetComponent,
-    CultureWidgetComponent
+    CultureWidgetComponent,
+    AdminComponent
   ],
   imports: [
     BrowserAnimationsModule,
@@ -78,11 +82,13 @@ import { CultureWidgetComponent } from './dashboard/culture.widget.component';
     ChartsModule,
     MatFormFieldModule,
     MatStepperModule,
+    MatTableModule,
     ProdutionWidgetComponent,
     ContaminationWidgetComponent,
     NextcollectionWidgetComponent,
     PreselectionWidgetComponent,
     CultureWidgetComponent,
+    FlexLayoutModule,
     AngularFireModule.initializeApp(environment.firebase),
     ROUTING
   ],
