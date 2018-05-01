@@ -42,6 +42,7 @@ import { CultureWidgetComponent } from './dashboard/culture.widget.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { AdminComponent } from './admin/admin.component';
 import {MatTableModule} from '@angular/material/table';
+import {MatSidenavModule} from '@angular/material/sidenav';
 
 @NgModule({
   declarations: [
@@ -61,6 +62,7 @@ import {MatTableModule} from '@angular/material/table';
     AdminComponent
   ],
   imports: [
+    MatSidenavModule,
     BrowserAnimationsModule,
     BrowserModule,
     MatSliderModule,
