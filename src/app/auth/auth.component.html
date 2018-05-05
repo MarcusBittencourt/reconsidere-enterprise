@@ -1,47 +1,49 @@
-<div class="container">
-  <div class="row justify-content-center">
-    <img src="assets/reconsidere-logo.png" width="300px" height="50px">
-  </div>
-  <span *ngIf="!(user | async)?.email">
-    <div class="form-group" width="10%">
-      <input type="email" class="form-control" [(ngModel)]="email" placeholder="E-mail">
+<div class="jumbotron vertical-center">
+  <div class="w-25 p-3 container">
+    <div class="row justify-content-center">
+      <img src="assets/reconsidere-logo.png" width="300px" height="50px">
     </div>
-    <div class="form-group">
-      <input type="password" class="form-control" [(ngModel)]="senha" placeholder="Senha">
-    </div>
-    <button (click)="login()" class="btn btn-block btn-outline-success" routerLink="/startcenter" routerLinkActive="active">Entrar</button>
-
-    <div *ngIf="abreEmailCadastro" class="row justify-content-center">
-      <div class="form-group">
-        <input type="text" class="form-control" [(ngModel)]="nome" placeholder="Nome">
-      </div>
+    <span *ngIf="!(user | async)?.email">
       <div class="form-group">
         <input type="email" class="form-control" [(ngModel)]="email" placeholder="E-mail">
       </div>
       <div class="form-group">
         <input type="password" class="form-control" [(ngModel)]="senha" placeholder="Senha">
       </div>
+      <button (click)="login()" class="btn btn-block btn-outline-success" routerLink="/startcenter" routerLinkActive="active">Entrar</button>
 
-      <div class="form-group">
-        <input type="text" class="form-control" [(ngModel)]="urlImagem" placeholder="Url da Imagem do Perfil">
+      <div *ngIf="abreEmailCadastro" class="row justify-content-center">
+        <div class="form-group">
+          <input type="text" class="form-control" [(ngModel)]="nome" placeholder="Nome">
+        </div>
+        <div class="form-group">
+          <input type="email" class="form-control" [(ngModel)]="email" placeholder="E-mail">
+        </div>
+        <div class="form-group">
+          <input type="password" class="form-control" [(ngModel)]="senha" placeholder="Senha">
+        </div>
+
+        <div class="form-group">
+          <input type="text" class="form-control" [(ngModel)]="urlImagem" placeholder="Url da Imagem do Perfil">
+        </div>
+
+        <button (click)="signup()" class="btn btn-block btn-outline-info">Enviar</button>
       </div>
 
-      <button (click)="signup()" class="btn btn-block btn-outline-info">Enviar</button>
-    </div>
-
-    <div class="row justify-content-center">
-      <button (click)="abreEmailCadastro = !abreEmailCadastro" class="btn btn-block btn-outline-warning">Cadastrar</button>
-    </div>
-  </span>
-  <div *ngIf="(user | async)?.email" class="row justify-content-center">
-    <div class="media">
-      <img *ngIf="(user | async)?.photoURL" class="d-flex mr-3" width="60" src="{{(user | async)?.photoURL}}" alt="{{(user | async)?.displayName}}">
-      <img *ngIf="!(user | async)?.photoURL" class="d-flex mr-3" width="60" src="https://cdn-images-1.medium.com/max/1600/1*g09N-jl7JtVjVZGcd-vL2g.jpeg"
-        alt="{{(user | async)?.displayName}}">
-      <div class="media-body">
-        <h5 class="mt-0">{{(user | async)?.displayName}}</h5>
-        <p class="mt-0">{{(user | async)?.email}}</p>
-        <button (click)="logout()" class="btn btn-info">Sair</button>
+      <div class="row justify-content-center">
+        <button (click)="abreEmailCadastro = !abreEmailCadastro" class="btn btn-block btn-outline-warning">Cadastrar</button>
+      </div>
+    </span>
+    <div *ngIf="(user | async)?.email" class="row justify-content-center">
+      <div class="media">
+        <img *ngIf="(user | async)?.photoURL" class="d-flex mr-3" width="60" src="{{(user | async)?.photoURL}}" alt="{{(user | async)?.displayName}}">
+        <img *ngIf="!(user | async)?.photoURL" class="d-flex mr-3" width="60" src="https://cdn-images-1.medium.com/max/1600/1*g09N-jl7JtVjVZGcd-vL2g.jpeg"
+          alt="{{(user | async)?.displayName}}">
+        <div class="media-body">
+          <h5 class="mt-0">{{(user | async)?.displayName}}</h5>
+          <p class="mt-0">{{(user | async)?.email}}</p>
+          <button (click)="logout()" class="btn btn-info">Sair</button>
+        </div>
       </div>
     </div>
   </div>
