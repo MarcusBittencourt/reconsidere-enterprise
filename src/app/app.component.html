@@ -1,8 +1,9 @@
-<mat-drawer-container>
-  <mat-drawer mode="side" opened="true">
+<app-auth></app-auth>
+<mat-drawer-container fxFlexFill fxLayout="column">
+  <mat-drawer fxFlex mode="side" opened="true">
     <app-toolbar></app-toolbar>
   </mat-drawer>
-  <mat-drawer-content>
+  <mat-drawer-content fxFlex>
     <router-outlet></router-outlet>
   </mat-drawer-content>
 </mat-drawer-container>

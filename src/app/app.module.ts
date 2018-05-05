@@ -49,14 +49,6 @@ import { AuthComponent } from './auth/auth.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {AngularFireDatabaseModule } from 'angularfire2/database';
 
-export const firebaseConfig = {
-  apiKey: "AIzaSyAXr6Yyl5EL3p5yq3xtGyqaVby2S-xR-oc",
-  authDomain: "angular4curso-f4cfd.firebaseapp.com",
-  databaseURL: "https://angular4curso-f4cfd.firebaseio.com",
-  storageBucket: "angular4curso-f4cfd.appspot.com",
-  messagingSenderId: "550238714175"
-};
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -106,9 +98,7 @@ export const firebaseConfig = {
     CultureWidgetComponent,
     FlexLayoutModule,
     AngularFireModule.initializeApp(environment.firebase),
-
     NgbModule.forRoot(),
-    AngularFireModule.initializeApp(firebaseConfig),
     AngularFireDatabaseModule,
     FormsModule,
     AngularFireAuthModule,

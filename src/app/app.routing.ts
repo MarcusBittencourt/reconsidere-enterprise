@@ -11,14 +11,14 @@ import { UpdatesComponent } from './updates/updates.component';
 import {AuthComponent} from './auth/auth.component';
 
 export const routes: Routes = [
-  { path: '', component: StartcenterComponent },
+  { path: '', component: AuthComponent },
+  { path: 'auth', component: AuthComponent },
+  { path: 'startcenter', component: StartcenterComponent },
   { path: 'profile', component: ProfileComponent },
   { path: 'admin', component: AdminComponent },
   { path: 'dasboards', component: DashboardComponent },
   { path: 'measurements', component: MeasurementsComponent },
   { path: 'updates', component: UpdatesComponent },
-  { path: 'auth', component: AuthComponent},
-
 ];
 
 export const ROUTING: ModuleWithProviders = RouterModule.forRoot(routes);

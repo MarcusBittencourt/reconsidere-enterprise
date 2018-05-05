@@ -15,44 +15,37 @@ export class AuthComponent implements OnInit {
   email: string;
   senha: string;
   nome: string;
-  urlImagem:string;
+  urlImagem: string;
 
-  constructor(public afAuth: AngularFireAuth){
+  ngOnInit(): void {
+  }
+
+  constructor(public afAuth: AngularFireAuth) {
     this.user = this.afAuth.authState;
   }
 
-  loginFacebook(){
-  this.afAuth.auth.signInWithPopup(new firebase.auth.FacebookAuthProvider());
+  signup() {
+    firebase
+    .auth()
+    .createUserWithEmailAndPassword(this.email, this.senha).then((res) => {
+      console.log(res);
+      firebase.auth().currentUser.updateProfile({
+        displayName: this.nome,
+        photoURL: this.urlImagem
+      });
+    }).catch((erro: any) => {
+      console.log(erro);
+    });
   }
 
-  loginEmail(){
-  //console.log(this.email, this.senha);
-  firebase.auth().signInWithEmailAndPassword(this.email,this.senha).catch((erro:any)=>{
-    console.log(erro);
-  });
+  login() {
+    firebase.auth().signInWithEmailAndPassword(this.email, this.senha).catch((erro: any) => {
+      console.log(erro);
+    });
   }
 
-  cadastroEmail(){
-  //console.log(this.email, this.senha);
-  firebase.auth().createUserWithEmailAndPassword(this.email,this.senha).then((res)=>{
-  console.log(res);
-  let usuario = firebase.auth().currentUser;
-  usuario.updateProfile({
-    displayName: this.nome,
-    photoURL: this.urlImagem
-  });
-  }).catch((erro:any)=>{
-    console.log(erro);
-  });
-  }
-
-
-  loginGithub(){
-  this.afAuth.auth.signInWithPopup(new firebase.auth.GithubAuthProvider());
-  }
-
-  sair(){
-  this.afAuth.auth.signOut();
+  logout() {
+    this.afAuth.auth.signOut();
   }
 
 }

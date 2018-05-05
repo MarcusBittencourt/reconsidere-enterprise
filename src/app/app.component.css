@@ -1,3 +1,5 @@
 mat-drawer {
+  width: 5%;
   background: springgreen;
+  overflow: hidden;
 }

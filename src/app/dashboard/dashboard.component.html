@@ -1,28 +1,30 @@
-<mat-select #view id="visualization" value="enterprise">
-  <mat-option value="enterprise">Empresa</mat-option>
-  <mat-option value="cooperative">Cooperativa</mat-option>
-  <mat-option value="reconsidere">Reconsidere</mat-option>
-  <mat-option value="city">Município</mat-option>
-</mat-select>
-<div class="dashboard-container" *ngIf="view.value == 'enterprise'">
-  <widget-contamination></widget-contamination>
-  <widget-preselection></widget-preselection>
-  <widget-prodution></widget-prodution>
-  <widget-culture></widget-culture>
-</div>
-<div class="dashboard-container" *ngIf="view.value == 'cooperative'">
-  <widget-nextcollection></widget-nextcollection>
-  <widget-prodution></widget-prodution>
-</div>
-<div class="dashboard-container" *ngIf="view.value == 'reconsidere'">
-  <widget-contamination></widget-contamination>
-  <widget-prodution></widget-prodution>
-  <widget-preselection></widget-preselection>
-  <widget-nextcollection></widget-nextcollection>
-</div>
-<div class="dashboard-container" *ngIf="view.value == 'city'">
-  <widget-culture></widget-culture>
-  <widget-contamination></widget-contamination>
-  <widget-prodution></widget-prodution>
-  <widget-preselection></widget-preselection>
+<div class="dashboard" fxFlexFill fxLayout="column">
+  <mat-select #view id="visualization" value="enterprise">
+    <mat-option value="enterprise">Empresa</mat-option>
+    <mat-option value="cooperative">Cooperativa</mat-option>
+    <mat-option value="reconsidere">Reconsidere</mat-option>
+    <mat-option value="city">Município</mat-option>
+  </mat-select>
+  <div class="dashboard-container" *ngIf="view.value == 'enterprise'">
+      <widget-contamination></widget-contamination>
+      <widget-preselection></widget-preselection>
+      <widget-prodution></widget-prodution>
+      <widget-culture></widget-culture>
+  </div>
+  <div class="dashboard-container" *ngIf="view.value == 'cooperative'">
+    <widget-nextcollection></widget-nextcollection>
+    <widget-prodution></widget-prodution>
+  </div>
+  <div class="dashboard-container" *ngIf="view.value == 'reconsidere'">
+    <widget-contamination></widget-contamination>
+    <widget-prodution></widget-prodution>
+    <widget-preselection></widget-preselection>
+    <widget-nextcollection></widget-nextcollection>
+  </div>
+  <div class="dashboard-container" *ngIf="view.value == 'city'">
+    <widget-culture></widget-culture>
+    <widget-contamination></widget-contamination>
+    <widget-prodution></widget-prodution>
+    <widget-preselection></widget-preselection>
+  </div>
 </div>
