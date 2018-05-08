@@ -49,6 +49,8 @@ import { AuthComponent } from './auth/auth.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {AngularFireDatabaseModule } from 'angularfire2/database';
 
+import { autenticacao } from "./autenticacao";
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -104,7 +106,7 @@ import {AngularFireDatabaseModule } from 'angularfire2/database';
     AngularFireAuthModule,
     ROUTING
   ],
-  providers: [AngularFireDatabase, {provide: APP_BASE_HREF, useValue: '/' }],
+  providers: [AngularFireDatabase, autenticacao, {provide: APP_BASE_HREF, useValue: '/' }],
   bootstrap: [AppComponent]
 })
 export class AppModule {

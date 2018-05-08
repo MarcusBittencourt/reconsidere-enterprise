@@ -3,49 +3,38 @@ import { Component, OnInit } from '@angular/core';
 import {Observable} from 'rxjs/Observable';
 import {AngularFireAuth} from 'angularfire2/auth';
 import * as firebase from 'firebase/app';
+import { autenticacao } from "../autenticacao";
+import {UserModel} from '../model/user.model'
 
 @Component({
   selector: 'app-auth',
   templateUrl: './auth.component.html',
   styleUrls: ['./auth.component.css']
 })
-export class AuthComponent implements OnInit {
+export class AuthComponent  {
 
-  user: Observable<firebase.User>;
+ 
   email: string;
   senha: string;
   nome: string;
-  urlImagem: string;
-
-  ngOnInit(): void {
+ 
+  constructor(
+    public afAuth: AngularFireAuth, 
+    private authService: autenticacao)
+  {
+   
   }
 
-  constructor(public afAuth: AngularFireAuth) {
-    this.user = this.afAuth.authState;
-  }
+ 
 
-  signup() {
-    firebase
-    .auth()
-    .createUserWithEmailAndPassword(this.email, this.senha).then((res) => {
-      console.log(res);
-      firebase.auth().currentUser.updateProfile({
-        displayName: this.nome,
-        photoURL: this.urlImagem
-      });
-    }).catch((erro: any) => {
-      console.log(erro);
-    });
-  }
+signup() {
+  this.authService.signup(this.email, this.senha);
+  this.email = this.senha = '';
+}
 
-  login() {
-    firebase.auth().signInWithEmailAndPassword(this.email, this.senha).catch((erro: any) => {
-      console.log(erro);
-    });
-  }
-
-  logout() {
-    this.afAuth.auth.signOut();
-  }
+ login() {
+  this.authService.login(this.email, this.senha);
+  this.email = this.senha = '';    
+ }
 
 }

@@ -1,11 +1,11 @@
 export const environment = {
   production: true,
   firebase: {
-    apiKey: 'AIzaSyCOuYr9T73IGl7vWQDfiYkdp3ke2IfhwrU',
-    authDomain: 'reconsidere-enterprise-ad6cd.firebaseapp.com',
-    databaseURL: 'https://reconsidere-enterprise-ad6cd.firebaseio.com',
-    projectId: 'reconsidere-enterprise-ad6cd',
-    storageBucket: 'reconsidere-enterprise-ad6cd.appspot.com',
-    messagingSenderId: '466370065422'
+    apiKey: "AIzaSyAt74MAjgFMhV7wTkZrn7ffg4SRVpXomkU",
+    authDomain: "reconsidere-enterprise.firebaseapp.com",
+    databaseURL: "https://reconsidere-enterprise.firebaseio.com",
+    projectId: "reconsidere-enterprise",
+    storageBucket: "reconsidere-enterprise.appspot.com",
+    messagingSenderId: "613435247866"
   }
 };
