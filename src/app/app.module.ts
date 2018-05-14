@@ -43,13 +43,14 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { AdminComponent } from './admin/admin.component';
 import {MatTableModule} from '@angular/material/table';
 import {MatSidenavModule} from '@angular/material/sidenav';
-import { AuthComponent } from './auth/auth.component';
+import { SignUpComponent } from './sign-up/sign-up.component';
 
 
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {AngularFireDatabaseModule } from 'angularfire2/database';
 
-import { autenticacao } from "./autenticacao";
+import { AuthService } from "./auth.service";
+import { SignInComponent } from './sign-in/sign-in.component';
 
 @NgModule({
   declarations: [
@@ -67,7 +68,8 @@ import { autenticacao } from "./autenticacao";
     PreselectionWidgetComponent,
     CultureWidgetComponent,
     AdminComponent,
-    AuthComponent
+    SignUpComponent,
+    SignInComponent
   ],
   imports: [
     MatSidenavModule,
@@ -106,7 +108,7 @@ import { autenticacao } from "./autenticacao";
     AngularFireAuthModule,
     ROUTING
   ],
-  providers: [AngularFireDatabase, autenticacao, {provide: APP_BASE_HREF, useValue: '/' }],
+  providers: [AngularFireDatabase, AuthService, {provide: APP_BASE_HREF, useValue: '/' }],
   bootstrap: [AppComponent]
 })
 export class AppModule {

@@ -6,7 +6,7 @@ import { Router } from '@angular/router';
 
 import { Observable } from 'rxjs/Observable';
 @Injectable()
-export class autenticacao {
+export class AuthService {
      user: Observable<firebase.User>;
   constructor(
       private router: Router,

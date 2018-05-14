@@ -8,11 +8,12 @@ import { ModuleWithProviders } from '@angular/core/src/metadata/ng_module';
 import { ProfileComponent } from './profile/profile.component';
 import { StartcenterComponent } from './startcenter/startcenter.component';
 import { UpdatesComponent } from './updates/updates.component';
-import {AuthComponent} from './auth/auth.component';
+import {SignUpComponent} from './sign-up/sign-up.component';
+import { SignInComponent } from "./sign-in/sign-in.component";
 
 export const routes: Routes = [
-  { path: '', component: AuthComponent },
-  { path: 'auth', component: AuthComponent },
+  { path: '', component: SignUpComponent },
+  {path: 'signIn', component: SignInComponent},
   { path: 'startcenter', component: StartcenterComponent },
   { path: 'profile', component: ProfileComponent },
   { path: 'admin', component: AdminComponent },

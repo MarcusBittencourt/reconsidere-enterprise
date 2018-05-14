@@ -1,0 +1,28 @@
+ <hr class="mb-5">
+<div class="container">
+<div class="row">
+  <div class="col-md-6 offset-md-3">
+    <span class="anchor"></span>
+
+    <!-- form card login with validation feedback -->
+    <div class="card-header">
+      <div class="form-group">
+        <h3>Nome</h3>
+        <input type="text" class="form-control" [(ngModel)]="name" placeholder="Nome">
+      </div>
+      <div class="form-group">
+        <h3>Email</h3>
+        <input type="email" class="form-control" [(ngModel)]="email" placeholder="E-mail">
+      </div>
+      <div class="form-group">
+        <h3>Senha</h3>
+        <input type="password" class="form-control" [(ngModel)]="password" placeholder="Senha">
+      </div>
+
+      <button (click)="signup()" class="btn btn-block btn-outline-info">Cadastrar</button>
+    </div>
+  </div>
+
+  <!--/card-body-->
+</div>
+</div>
