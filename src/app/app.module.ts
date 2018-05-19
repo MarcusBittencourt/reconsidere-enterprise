@@ -8,7 +8,6 @@ import { MatSliderModule } from '@angular/material/slider';
 import { FormsModule} from '@angular/forms';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatGridListModule } from '@angular/material/grid-list';
-import { ToolbarComponent } from './toolbar/toolbar.component';
 import { MatListModule } from '@angular/material/list';
 import { MatIconModule } from '@angular/material/icon';
 import { AngularFireModule } from 'angularfire2';
@@ -43,20 +42,22 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { AdminComponent } from './admin/admin.component';
 import {MatTableModule} from '@angular/material/table';
 import {MatSidenavModule} from '@angular/material/sidenav';
+import { SignInComponent } from './sign-in/sign-in.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
-
+import { ToolbarComponent } from './toolbar/toolbar.component';
+import { AuthService } from '../services/auth.service';
 
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {AngularFireDatabaseModule } from 'angularfire2/database';
+import { AuthGuard } from '../guards/auth.guard';
+import { LogoutComponent } from './logout/logout.component';
 
-import { AuthService } from "./auth.service";
-import { SignInComponent } from './sign-in/sign-in.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MeasurementsComponent,
     ToolbarComponent,
+    MeasurementsComponent,
     UpdatesComponent,
     StartcenterComponent,
     ProfileComponent,
@@ -69,7 +70,8 @@ import { SignInComponent } from './sign-in/sign-in.component';
     CultureWidgetComponent,
     AdminComponent,
     SignUpComponent,
-    SignInComponent
+    SignInComponent,
+    LogoutComponent
   ],
   imports: [
     MatSidenavModule,
@@ -108,7 +110,7 @@ import { SignInComponent } from './sign-in/sign-in.component';
     AngularFireAuthModule,
     ROUTING
   ],
-  providers: [AngularFireDatabase, AuthService, {provide: APP_BASE_HREF, useValue: '/' }],
+  providers: [AngularFireDatabase, AuthService, AuthGuard, {provide: APP_BASE_HREF, useValue: '/' }],
   bootstrap: [AppComponent]
 })
 export class AppModule {

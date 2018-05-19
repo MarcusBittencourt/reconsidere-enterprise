@@ -1,37 +1,38 @@
-<mat-list role="list">
-  <mat-list-item>
-    <mat-icon routerLink="" routerLinkActive="active">dashboard</mat-icon>
-  </mat-list-item>
-  <mat-list-item >
-    <mat-icon routerLink="/admin" routerLinkActive="active">settings</mat-icon>
-  </mat-list-item>
-  <mat-list-item>
-    <mat-icon routerLink="/profile" routerLinkActive="active">account_box</mat-icon>
-  </mat-list-item>
-
-  <mat-list-item>
-    <mat-icon routerLink="/auth" routerLinkActive="active">account_box</mat-icon>
-  </mat-list-item>
-
-  <mat-list-item >
-      <mat-icon routerLink="/logout" routerLinkActive="active">exit</mat-icon>
-  </mat-list-item>
-  <mat-list-item >
-      <mat-icon routerLink="/dashboards" routerLinkActive="active">code</mat-icon>
-  </mat-list-item>
-  <mat-list-item >
-      <mat-icon routerLink="/measurements" routerLinkActive="active">code</mat-icon>
-  </mat-list-item>
-  <mat-list-item>
-      <mat-icon routerLink="/planner" routerLinkActive="active">code</mat-icon>
-  </mat-list-item>
-  <mat-list-item>
-      <mat-icon routerLink="/scheduler" routerLinkActive="active">code</mat-icon>
-  </mat-list-item>
-  <mat-list-item>
-      <mat-icon routerLink="/collection" routerLinkActive="active">code</mat-icon>
-  </mat-list-item>
-  <mat-list-item>
-      <mat-icon routerLink="/inputs" routerLinkActive="active">code</mat-icon>
-  </mat-list-item>
-</mat-list>
+<div class="sidenav" #sidenav>
+  <mat-list>
+    <mat-list-item routerLink="/startcenter" routerLinkActive="active">
+      <mat-icon>dashboard</mat-icon>
+      <span class="spacer"></span>
+      <p>Central</p>
+    </mat-list-item>
+    <mat-list-item>
+      <mat-icon>code</mat-icon>
+      <p class="option">Atividades</p>
+    </mat-list-item>
+    <mat-list-item>
+      <mat-icon>code</mat-icon>
+      <p class="option">Apontamento</p>
+    </mat-list-item>
+    <mat-list-item routerLink="/weighing" routerLinkActive="active">
+      <mat-icon>bar_chart</mat-icon>
+      <p class="option">Medição</p>
+    </mat-list-item>
+    <mat-list-item routerLink="/admin" routerLinkActive="active">
+      <mat-icon>settings</mat-icon>
+      <p class="option">Administração</p>
+    </mat-list-item>
+    <mat-list-item routerLink="/profile" routerLinkActive="active">
+      <mat-icon>account_box</mat-icon>
+      <p class="option">Conta</p>
+    </mat-list-item>
+    <mat-list-item></mat-list-item>
+    <mat-list-item></mat-list-item>
+    <mat-list-item></mat-list-item>
+    <mat-list-item></mat-list-item>
+    <mat-list-item></mat-list-item>
+    <mat-list-item routerLink="/logout" routerLinkActive="active">
+      <mat-icon>code</mat-icon>
+      <p class="option">Sair</p>
+    </mat-list-item>
+  </mat-list>
+</div>

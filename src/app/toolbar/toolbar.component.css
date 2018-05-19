@@ -1,7 +1,21 @@
-mat-list {
-    background: springgreen;
+/* The sidenav */
+.sidenav {
+  height: 100%;
+  width: 15%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: springgreen;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  padding-top: 20px;
 }
 
-.toolbar-spacer {
+spacer {
   flex: 1 1 auto;
+}
+
+option {
+  text-align: end;
 }

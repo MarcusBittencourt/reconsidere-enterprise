@@ -1,10 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
-
+@import 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css';
 
 html, body {
   overflow: visible;
   box-sizing: border-box;
   height: 100%;
   margin: 0;
+}
+
+.main {
+  height: 100%;
+  width: 85%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  padding-top: 20px;
+  margin-left: 20%;
 }

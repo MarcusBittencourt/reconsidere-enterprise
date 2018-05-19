@@ -1,12 +1,16 @@
-<h3>Materiais</h3>
-<div class="container">
-  <form>
-    <div *ngFor="let material of measurement.materials">
-      <label for="material">{{material.name}}</label>
-      <input class="form-control" min="0" max="1000" type="number" minlength="1" maxlength="1000" [(ngModel)]="material.quantity"/>
-      <mat-hint align="end">{{material.unity_of_measurement}}</mat-hint>
-    </div>
-    <button class="btn btn-success" (click)="save()">Salvar</button>
-    <button class="btn btn-basic" (click)="discard()">Cancelar</button>
-  </form>
+<app-toolbar></app-toolbar>
+<div class="main">
+  <h1>Materiais</h1>
+  <div class="container">
+    <form>
+      <div *ngFor="let material of measurement.materials">
+        <label for="material">{{material.name}}</label>
+        <input class="form-control" min="0" max="1000" type="number" minlength="1" maxlength="1000" [(ngModel)]="material.quantity"
+        />
+        <mat-hint align="end">{{material.unity_of_measurement}}</mat-hint>
+      </div>
+      <button class="btn btn-success" (click)="save()">Salvar</button>
+      <button class="btn btn-basic" (click)="discard()">Cancelar</button>
+    </form>
+  </div>
 </div>
