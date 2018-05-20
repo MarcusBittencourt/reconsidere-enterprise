@@ -3,135 +3,258 @@
   <div class="col-md-10">
     <h1>Informações de Conta</h1>
     <!--<span class="anchor" id="formComplex"></span>-->
-    <h3>Empresa</h3>
-    <mat-divider></mat-divider>
-    <div class="form-row mt-4">
-      <div class="col-sm-5 pb-3">
-        <label for="razaoSocial">Razão Social</label>
-        <input type="text" class="form-control" id="name" [(ngModel)]="profile.basic.name" placeholder="XXXXXXXXXXXXXXXX">
+    <div class="card card-outline-secondary m-5">
+      <div class="card-header">
+        <h3 class="mb-0">Empresa</h3>
       </div>
-      <div class="col-sm-3 pb-3">
-        <label for="cnpj">CNPJ</label>
-        <input type="text" class="form-control" id="cnpj" placeholder="0000">
-      </div>
-      <div class="col-sm-4 pb-3">
-        <label for="exampleAmount">Amount</label>
-        <div class="input-group">
-          <div class="input-group-prepend">
-            <span class="input-group-text">$</span>
+      <div class="card-body">
+        <div class="form-row mt-4">
+          <div class="col-sm-5 pb-3">
+            <label for="razaoSocial">Razão Social</label>
+            <input type="text" class="form-control" id="name" [(ngModel)]="profile.basic.name" placeholder="XXXXXXXXXXXXXXXX">
           </div>
-          <input type="text" class="form-control" id="exampleAmount" placeholder="Amount">
+          <div class="col-sm-3 pb-3">
+            <label for="cnpj">CNPJ</label>
+            <input type="text" class="form-control" id="cnpj" placeholder="0000">
+          </div>
+          <div class="col-sm-4 pb-3">
+            <label for="exampleAmount">Amount</label>
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text">$</span>
+              </div>
+              <input type="text" class="form-control" id="exampleAmount" placeholder="Amount">
+            </div>
+          </div>
         </div>
       </div>
     </div>
 
-    <h3>Localização</h3>
-    <mat-divider></mat-divider>
-    <div class="form-row mt-4">
-      <div class="col-sm-7 pb-3">
-        <label for="exampleFirst">Rua</label>
-        <input type="text" class="form-control" id="exampleFirst">
+    <div class="card card-outline-secondary m-5">
+      <div class="card-header">
+        <h3 class="mb-0">Localização</h3>
       </div>
-      <div class="col-sm-2 pb-3">
-        <label for="exampleLast">Número</label>
-        <input type="text" class="form-control" id="exampleLast">
-      </div>
-      <div class="col-sm-3 pb-3">
-        <label for="cep">CEP</label>
-        <input type="text" class="form-control" id="cep">
-      </div>
-      <div class="col-sm-3 pb-3">
-        <label for="city">Cidade</label>
-        <input type="text" class="form-control" id="city">
-      </div>
-      <div class="col-sm-3 pb-3">
-        <label for="state">Estado</label>
-        <select class="form-control" id="state">
-          <option>Pick a state</option>
-        </select>
-      </div>
-      <div class="col-sm-6 pb-3">
-        <label for="city">Complemento</label>
-        <input type="text" class="form-control" id="city">
-      </div>
-    </div>
-
-    <h3>Assistência</h3>
-    <mat-divider></mat-divider>
-    <div class="form-row mt-4">
-      <div class="col-md-7 pb-3">
-        <label for="consultant">Consultor</label>
-        <input type="text" class="form-control" [(ngModel)]="profile.assistance.consultant" id="consultant" />
-      </div>
-      <div class="col-md-2 pb-3">
-        <label for="visit">Carga horária</label>
-        <input type="number" min="0" max="8" class="form-control" [(ngModel)]="profile.assistance.workload" id="workload" />
-      </div>
-
-      <div class="col-md-3 pb-3">
-        <label for="visit">Frequência</label>
-        <mat-radio-group [(value)]="profile.assistance.visit" id="visit">
-          <mat-radio-button value="daily">Diaria</mat-radio-button>
-          <mat-radio-button value="weekly">Semanal</mat-radio-button>
-          <mat-radio-button value="monthly">Mensal</mat-radio-button>
-        </mat-radio-group>
+      <div class="card-body">
+        <div class="form-row mt-4">
+          <div class="col-sm-7 pb-3">
+            <label for="exampleFirst">Rua</label>
+            <input type="text" class="form-control" id="exampleFirst">
+          </div>
+          <div class="col-sm-2 pb-3">
+            <label for="exampleLast">Número</label>
+            <input type="text" class="form-control" id="exampleLast">
+          </div>
+          <div class="col-sm-3 pb-3">
+            <label for="cep">CEP</label>
+            <input type="text" class="form-control" id="cep">
+          </div>
+          <div class="col-sm-3 pb-3">
+            <label for="city">Cidade</label>
+            <input type="text" class="form-control" id="city">
+          </div>
+          <div class="col-sm-3 pb-3">
+            <label for="state">Estado</label>
+            <select class="form-control" id="state">
+              <option>Pick a state</option>
+            </select>
+          </div>
+          <div class="col-sm-6 pb-3">
+            <label for="city">Complemento</label>
+            <input type="text" class="form-control" id="city">
+          </div>
+        </div>
       </div>
     </div>
 
-    <h3>Materiais</h3>
-    <mat-divider></mat-divider>
-    <div class="form-row mt-4">
-      <mat-slide-toggle [(ngModel)]="profile.production.paper" [ngModelOptions]="{standalone: true}">Papel</mat-slide-toggle>
-      <mat-slide-toggle [(ngModel)]="profile.production.plastic" [ngModelOptions]="{standalone: true}">Plastico</mat-slide-toggle>
-      <mat-slide-toggle [(ngModel)]="profile.production.glass" [ngModelOptions]="{standalone: true}">Vidro</mat-slide-toggle>
-      <mat-slide-toggle [(ngModel)]="profile.production.metal" [ngModelOptions]="{standalone: true}">Metal</mat-slide-toggle>
-      <mat-slide-toggle [(ngModel)]="profile.production.isopor" [ngModelOptions]="{standalone: true}">Isopor</mat-slide-toggle>
-      <mat-slide-toggle [(ngModel)]="profile.production.fat" [ngModelOptions]="{standalone: true}">Gordura</mat-slide-toggle>
-      <mat-slide-toggle [(ngModel)]="profile.production.eletronic" [ngModelOptions]="{standalone: true}">Eletrônico</mat-slide-toggle>
-      <mat-slide-toggle [(ngModel)]="profile.production.organic" [ngModelOptions]="{standalone: true}">Orgânico</mat-slide-toggle>
-      <mat-slide-toggle [(ngModel)]="profile.production.inorganic" [ngModelOptions]="{standalone: true}">Inorgânico</mat-slide-toggle>
+    <div class="card card-outline-secondary m-5">
+      <div class="card-header">
+        <h3 class="mb-0">Assistência</h3>
+      </div>
+      <div class="card-body">
+        <div class="form-row mt-4">
+          <div class="col-md-7 pb-3">
+            <label for="consultant">Consultor</label>
+            <input type="text" class="form-control" [(ngModel)]="profile.assistance.consultant" id="consultant" />
+          </div>
+          <div class="col-md-2 pb-3">
+            <label for="visit">Carga horária</label>
+            <input type="number" min="0" max="8" class="form-control" [(ngModel)]="profile.assistance.workload" id="workload" />
+          </div>
+
+          <div class="col-md-3 pb-3">
+            <label for="visit">Frequência</label>
+            <select [(value)]="profile.assistance.visit" class="form-control" id="visit">
+              <option value="daily">Diaria</option>
+              <option value="weekly">Semanal</option>
+              <option value="monthly">Mensal</option>
+            </select>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <h3>Assinatura</h3>
-    <mat-divider></mat-divider>
-    <div class="form-row mt-4">
-      <div class="form-row">
-        <label class="col-md col-form-label" for="name">Generated Id</label>
-        <input type="text" class="form-control col-md-4" name="gid" id="gid" />
-        <label class="col-md col-form-label" for="name">Date Assigned</label>
-        <input type="text" class="form-control col-md-4" name="da" id="da" />
+    <div class="card card-outline-secondary m-5">
+      <div class="card-header">
+        <h3 class="mb-0">Materiais</h3>
+      </div>
+      <div class="card-body">
+        <div class="form-row mt-4">
+          <div class="col-md-6 pb-3">
+            <mat-slide-toggle [(ngModel)]="profile.production.paper" [ngModelOptions]="{standalone: true}">Papel</mat-slide-toggle>
+            <mat-slide-toggle [(ngModel)]="profile.production.plastic" [ngModelOptions]="{standalone: true}">Plastico</mat-slide-toggle>
+            <mat-slide-toggle [(ngModel)]="profile.production.glass" [ngModelOptions]="{standalone: true}">Vidro</mat-slide-toggle>
+            <mat-slide-toggle [(ngModel)]="profile.production.metal" [ngModelOptions]="{standalone: true}">Metal</mat-slide-toggle>
+            <mat-slide-toggle [(ngModel)]="profile.production.isopor" [ngModelOptions]="{standalone: true}">Isopor</mat-slide-toggle>
+          </div>
+          <div class="col-md-6 pb-3">
+            <mat-slide-toggle [(ngModel)]="profile.production.fat" [ngModelOptions]="{standalone: true}">Gordura</mat-slide-toggle>
+            <mat-slide-toggle [(ngModel)]="profile.production.eletronic" [ngModelOptions]="{standalone: true}">Eletrônico</mat-slide-toggle>
+            <mat-slide-toggle [(ngModel)]="profile.production.organic" [ngModelOptions]="{standalone: true}">Orgânico</mat-slide-toggle>
+            <mat-slide-toggle [(ngModel)]="profile.production.inorganic" [ngModelOptions]="{standalone: true}">Inorgânico</mat-slide-toggle>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-body">
+      <button (click)="saveChanges()" type="submit" class="btn btn-success col-md-4 m-3">Salvar</button>
+      <button (click)="restoreBackup()" class="btn btn-basic col-md-4 m-3">Restaurar Configurações</button>
+    </div>
+
+    <div class="card card-outline-secondary m-5">
+      <div class="card-header">
+        <h3 class="mb-0">Acesso</h3>
+      </div>
+      <div class="card-body">
+        <div class="form-row mt-4">
+          <div class="col-md-6 pb-3">
+            <label for="password">Senha</label>
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text">
+                  <i (click)="hidepassword=!hidepassword" class="fa fa-eye" *ngIf="!hidepassword"></i>
+                  <i (click)="hidepassword=!hidepassword" class="fa fa-eye-slash" *ngIf="hidepassword"></i>
+                </span>
+              </div>
+              <input matInput #password type="{{hidepassword ? 'password' : 'text'}}" minlenght="4" maxlength="20" class="form-control"
+                [(ngModel)]="profile.account.password" id="password" />
+              <div class="input-group-append">
+                <span class="input-group-text">
+                  <mat-hint>{{password.value?.length || 0}}/20</mat-hint>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 pb-3">
+            <label for="password-verirification">Repita a senha: </label>
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text">
+                  <i (click)="hidepasswordv=!hidepasswordv" class="fa fa-eye" *ngIf="!hidepasswordv"></i>
+                  <i (click)="hidepasswordv=!hidepasswordv" class="fa fa-eye-slash" *ngIf="hidepasswordv"></i>
+                </span>
+              </div>
+              <input matInput #passwordv type="{{hidepasswordv.value ? 'password' : 'text'}}" minlength="0" maxlength="20" class="form-control"
+                id="password-verirification" />
+              <div class="input-group-append">
+                <span class="input-group-text">
+                  <mat-hint align="end">{{passwordv.value?.length || 0}}/20</mat-hint>
+                </span>
+              </div>
+            </div>
+          </div>
+          <button (click)="changePassword()" class="btn btn-danger col-md-4">Alterar senha</button>
+        </div>
       </div>
 
-      <label for="startdate">Data de início</label>
-      <input type="date" class="form-control" id="startdate" />
-
-      <label for="payment">Pagamento</label>
-      <input type="text" class="form-control" [(ngModel)]="profile.signature.payment" id="payment" />
-
-      <label for="salary">Vencimento</label>
-      <input type="text" class="form-control" [(ngModel)]="profile.signature.salary" id="salary" />
-
-      <button (click)="cancelSingnature()" class="btn btn-danger">Cancelar assinatura</button>
     </div>
 
-    <h3>Acesso</h3>
-    <mat-divider></mat-divider>
-    <div class="form-row mt-4">
-      <label for="password">Senha</label>
-      <input matInput #password type="{{hidepassword ? 'password' : 'text'}}" minlenght="4" maxlength="20" class="form-control"
-        [(ngModel)]="profile.account.password" [ngModelOptions]="{standalone: true}" id="password" />
-      <mat-hint align="end">{{password.value?.length || 0}}/20</mat-hint>
+    <div class="card card-outline-secondary m-5">
+      <div class="card-header">
+        <h3 class="mb-0">Assinatura</h3>
+      </div>
+      <div class="card-body">
+        <div class="form-row mt-4">
+          <div class="col-md-5 pb-3">
+            <label for="startdate">Data de início</label>
+            <input type="date" class="form-control" id="startdate" />
+          </div>
 
-      <label for="password-verirification">Repita a senha: </label>
-      <input matInput #password_verfication type="{{hidepassword.value ? 'password' : 'text'}}" maxlength="20" class="form-control"
-        id="password-verirification" />
-      <mat-hint align="end">{{password_verfication.value?.length || 0}}/20</mat-hint>
+          <div class="col-md-5 pb-3">
+            <label for="startdate">Término</label>
+            <input type="date" class="form-control" id="startdate" />
+          </div>
 
-      <button (click)="changePassword()" class="btn btn-danger">Alterar senha</button>
-      <input type="checkbox" id="hidepassword" checked #hidepassword/>
-      <label for="hidepassword">Ocultar caracteres</label>
+          <div class="col-md-5 pb-3">
+            <label for="payment">Pagamento</label>
+            <input type="date" class="form-control" [(ngModel)]="profile.signature.payment" id="payment" />
+          </div>
+
+          <div class="col-md-5 pb-3">
+            <label for="salary">Vencimento</label>
+            <input type="date" class="form-control" [(ngModel)]="profile.signature.salary" id="salary" />
+          </div>
+
+          <div class="col-md-5">
+            <label for="cc_name">Nome no cartão</label>
+            <input type="text" class="form-control" id="cc_name" pattern="\w+ \w+.*" title="First and last name" required="required">
+          </div>
+          <div class="col-md-3">
+            <label>Número do cartão</label>
+            <input type="text" class="form-control" autocomplete="off" maxlength="20" pattern="\d{16}" title="Credit card number" required="">
+          </div>
+          <div class="col-md-2">
+            <label for="cvc">CVC</label>
+            <input type="text" class="form-control" autocomplete="off" maxlength="3" pattern="\d{3}" title="Three digits at back of your card"
+              required="required" placeholder="CVC" id="cvc">
+          </div>
+          <div hidden="hidden" class="alert alert-info p-2 pb-3">
+            <!-- Realizar validaçao com angular -->
+            <p> CVC code is required.</p>
+          </div>
+          <div class="col-md-3">
+            <label>Mês</label>
+            <select class="form-control" name="cc_exp_mo" size="0">
+              <option value="01">01</option>
+              <option value="02">02</option>
+              <option value="03">03</option>
+              <option value="04">04</option>
+              <option value="05">05</option>
+              <option value="06">06</option>
+              <option value="07">07</option>
+              <option value="08">08</option>
+              <option value="09">09</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+            </select>
+          </div>
+          <div class="col-md-3">
+            <label>Ano</label>
+            <select class="form-control" name="cc_exp_yr" size="0">
+              <option>2018</option>
+              <option>2019</option>
+              <option>2020</option>
+              <option>2021</option>
+              <option>2022</option>
+            </select>
+          </div>
+          <div class="col-md-4">
+            <label for="cost">Valor Mensal</label>
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text">R$</span>
+              </div>
+              <input type="text" class="form-control text-right" disabled="disabled" id="cost" placeholder="39">
+              <div class="input-group-append">
+                <span class="input-group-text">,00</span>
+              </div>
+            </div>
+          </div>
+          <button (click)="cancelSingnature()" class="btn btn-success col-md-4 m-3">Alterar Pagador</button>
+          <button (click)="cancelSingnature()" class="btn btn-danger col-md-4 m-3">Cancelar assinatura</button>
+        </div>
+      </div>
     </div>
-
-    <button (click)="saveChanges()" type="submit" class="btn btn-success">Salvar</button>
-    <button (click)="restoreBackup()" class="btn btn-basic">Restaurar Configurações</button>
   </div>
+</div>
