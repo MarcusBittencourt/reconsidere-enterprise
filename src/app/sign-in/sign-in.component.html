@@ -4,12 +4,12 @@
     <div class="col-md-5">
       <div class="card card-outline-secondary">
         <div class="card-header">
-          <h3 class="mb-0">Login</h3>
+          <h3 class="mb-0">Autenticação</h3>
         </div>
         <div class="card-body">
           <div class="form-group">
             <h3> Usuário </h3>
-            <input type="email" class="form-control" [(ngModel)]="email" placeholder="E-mail">
+            <input #username required type="email" class="form-control" [(ngModel)]="email" placeholder="E-mail">
           </div>
           <div class="form-group">
             <h3> Senha </h3>
@@ -21,7 +21,8 @@
                 </span>
               </div>
 
-              <input #passwordfield type="{{hidepassword ? 'password' : 'text'}}" minlenght="6" maxlength="20" class="form-control" [(ngModel)]="password" id="password" placeholder="Senha" />
+              <input #passwordfield type="{{hidepassword ? 'password' : 'text'}}" minlenght="6" maxlength="20" class="form-control" [(ngModel)]="password"
+                id="password" required placeholder="Senha" />
               <div class="input-group-append">
                 <span class="input-group-text">
                   <mat-hint>{{passwordfield.value?.length || 0}}/20</mat-hint>
@@ -29,7 +30,9 @@
               </div>
             </div>
           </div>
-          <button (click)="login()" class="btn btn-block btn-success">Entrar</button>
+          <button (click)="login();" class="btn btn-block btn-success">
+            Entrar<i *ngIf="entering" class="fa fa-spinner fa-spin"></i>
+          </button>
           <div class="form-check small">
             <label class="form-check-label">
               <input type="checkbox" class="form-check-input">
