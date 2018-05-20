@@ -13,6 +13,8 @@ export class ProfileComponent implements OnInit {
   title = 'Configurações do Perfil';
 
   constructor(private af: AngularFireDatabase) { }
+  hidepassword: boolean;
+  hidepasswordv: boolean;
 
   profile: Profile;
   backup: Profile;

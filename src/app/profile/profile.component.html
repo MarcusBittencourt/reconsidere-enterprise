@@ -136,6 +136,7 @@
                   <i (click)="hidepassword=!hidepassword" class="fa fa-eye-slash" *ngIf="hidepassword"></i>
                 </span>
               </div>
+
               <input matInput #password type="{{hidepassword ? 'password' : 'text'}}" minlenght="4" maxlength="20" class="form-control"
                 [(ngModel)]="profile.account.password" id="password" />
               <div class="input-group-append">
@@ -150,11 +151,11 @@
             <div class="input-group">
               <div class="input-group-prepend">
                 <span class="input-group-text">
-                  <i (click)="hidepasswordv=!hidepasswordv" class="fa fa-eye" *ngIf="!hidepasswordv"></i>
-                  <i (click)="hidepasswordv=!hidepasswordv" class="fa fa-eye-slash" *ngIf="hidepasswordv"></i>
+                  <i (click)="hidepassword=!hidepassword" class="fa fa-eye" *ngIf="!hidepassword"></i>
+                  <i (click)="hidepassword=!hidepassword" class="fa fa-eye-slash" *ngIf="hidepassword"></i>
                 </span>
               </div>
-              <input matInput #passwordv type="{{hidepasswordv.value ? 'password' : 'text'}}" minlength="0" maxlength="20" class="form-control"
+              <input matInput #passwordv type="{{hidepassword ? 'password' : 'text'}}" minlength="0" maxlength="20" class="form-control"
                 id="password-verirification" />
               <div class="input-group-append">
                 <span class="input-group-text">
