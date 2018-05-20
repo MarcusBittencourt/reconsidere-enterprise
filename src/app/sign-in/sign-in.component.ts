@@ -12,6 +12,7 @@ export class SignInComponent implements OnInit {
   email: string;
   password: string;
   name: string;
+  hidepassword =  true;
 
   constructor(private auth: AuthService, private router: Router) { }
 
@@ -19,7 +20,7 @@ export class SignInComponent implements OnInit {
   }
 
   login() {
-    this.auth.login('marcus@eowyn.com', '123456');//this.email, this.password);
+    this.auth.login(this.email, this.password);
     if (!this.auth.user) { return; }
     this.router.navigate(['/startcenter']);
   }

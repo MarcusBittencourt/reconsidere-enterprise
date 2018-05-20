@@ -126,8 +126,21 @@
         <h3 class="mb-0">Acesso</h3>
       </div>
       <div class="card-body">
+        <div class="col-md-10 alert alert-warning">
+          <p>Ao alterar a senha será necessário fornecer a senha antiga para efetivação. A nova senha será enviada por e-mail
+            junto com uma link de verificação, se o link não for confirmado em 36 horas a conta será bloqueada e acessível
+            apenas pelo SAC.</p>
+        </div>
         <div class="form-row mt-4">
-          <div class="col-md-6 pb-3">
+          <div class="col-md-10 pb-3">
+            <label for="username">Nome de usuário</label>
+            <input type="text" class="form-control" id="username" />
+          </div>
+          <div class="col-md-10 pb-3">
+            <label for="email">E-mail</label>
+            <input type="email" class="form-control" id="email" />
+          </div>
+          <div class="col-md-5 pb-3">
             <label for="password">Senha</label>
             <div class="input-group">
               <div class="input-group-prepend">
@@ -146,7 +159,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-6 pb-3">
+          <div class="col-md-5 pb-3">
             <label for="password-verirification">Repita a senha: </label>
             <div class="input-group">
               <div class="input-group-prepend">
@@ -175,6 +188,13 @@
         <h3 class="mb-0">Assinatura</h3>
       </div>
       <div class="card-body">
+        <div class="col-md-10 alert alert-warning">
+          <p>A operação será realizada por meio de validação com a operadora do cartão e pode demorar até 3 dias úteis para
+            que seja validada com o sistemas.</p>
+          <p>Nesse momento o acesso ao reconsidere já será liberado integralmente para a comodidade do cliente, e caso haja
+            algum problema com o pagamento, manteremos o acesso por mais 7 dias e os dados gerados por até 60 dias para regularização
+            do pagamento.</p>
+        </div>
         <div class="form-row mt-4">
           <div class="col-md-5 pb-3">
             <label for="startdate">Data de início</label>
