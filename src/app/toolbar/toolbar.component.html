@@ -1,38 +1,52 @@
 <div class="sidenav" #sidenav>
   <mat-list>
-    <mat-list-item routerLink="/startcenter" routerLinkActive="active">
-      <mat-icon>dashboard</mat-icon>
+    <mat-list-item class="option" routerLink="/startcenter" routerLinkActive="active">
+      Central
       <span class="spacer"></span>
-      <p>Central</p>
+      <mat-icon>dashboard</mat-icon>
     </mat-list-item>
-    <mat-list-item>
+    <mat-list-item class="option">
+      Atividades
+      <span class="spacer"></span>
       <mat-icon>code</mat-icon>
-      <p class="option">Atividades</p>
     </mat-list-item>
-    <mat-list-item>
+    <mat-list-item class="option">
+      Apontamento
+      <span class="spacer"></span>
       <mat-icon>code</mat-icon>
-      <p class="option">Apontamento</p>
     </mat-list-item>
-    <mat-list-item routerLink="/weighing" routerLinkActive="active">
+    <mat-list-item class="option" routerLink="/weighing" routerLinkActive="active">
+      Medição
+      <span class="spacer"></span>
       <mat-icon>bar_chart</mat-icon>
-      <p class="option">Medição</p>
     </mat-list-item>
-    <mat-list-item routerLink="/admin" routerLinkActive="active">
-      <mat-icon>settings</mat-icon>
-      <p class="option">Administração</p>
-    </mat-list-item>
-    <mat-list-item routerLink="/profile" routerLinkActive="active">
-      <mat-icon>account_box</mat-icon>
-      <p class="option">Conta</p>
-    </mat-list-item>
-    <mat-list-item></mat-list-item>
-    <mat-list-item></mat-list-item>
-    <mat-list-item></mat-list-item>
-    <mat-list-item></mat-list-item>
-    <mat-list-item></mat-list-item>
-    <mat-list-item routerLink="/logout" routerLinkActive="active">
+    <mat-list-item class="option" routerLink="/planning" routerLinkActive="active">
+      Planejamento
+      <span class="spacer"></span>
       <mat-icon>code</mat-icon>
-      <p class="option">Sair</p>
+    </mat-list-item>
+    <mat-list-item class="option" routerLink="/lifecycle" routerLinkActive="active">
+      Ciclo de Vida
+      <span class="spacer"></span>
+      <mat-icon>code</mat-icon>
+    </mat-list-item>
+    <mat-list-item></mat-list-item>
+    <mat-list-item></mat-list-item>
+    <mat-list-item></mat-list-item>
+    <mat-list-item class="option" routerLink="/profile" routerLinkActive="active">
+      Conta
+      <span class="spacer"></span>
+      <mat-icon>account_box</mat-icon>
+    </mat-list-item>
+    <mat-list-item class="option" routerLink="/admin" routerLinkActive="active">
+      Administração
+      <span class="spacer"></span>
+      <mat-icon>settings</mat-icon>
+    </mat-list-item>
+    <mat-list-item class="option" routerLink="/logout" routerLinkActive="active">
+      Sair
+      <span class="spacer"></span>
+      <mat-icon>code</mat-icon>
     </mat-list-item>
   </mat-list>
 </div>

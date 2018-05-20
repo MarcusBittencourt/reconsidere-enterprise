@@ -17,7 +17,7 @@ html, body {
   top: 0;
   left: 0;
   overflow-x: hidden;
-  overflow-y: hidden;
+  overflow-y: scroll !important;
   padding-top: 20px;
   margin-left: 20%;
 }

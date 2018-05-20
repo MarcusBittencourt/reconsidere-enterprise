@@ -12,10 +12,10 @@
   padding-top: 20px;
 }
 
-spacer {
+.spacer {
   flex: 1 1 auto;
 }
 
-option {
-  text-align: end;
+.option:hover {
+  background-color: yellow;
 }
