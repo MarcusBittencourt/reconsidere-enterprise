@@ -32,7 +32,6 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatRadioModule} from '@angular/material/radio';
-import { FooterComponent } from './footer/footer.component';
 import { ProdutionWidgetComponent } from './dashboard/prodution.widget.component';
 import { ContaminationWidgetComponent } from './dashboard/contamination.widget.component';
 import { PreselectionWidgetComponent } from './dashboard/preselection.widget.component';
@@ -62,7 +61,6 @@ import { LogoutComponent } from './logout/logout.component';
     StartcenterComponent,
     ProfileComponent,
     DashboardComponent,
-    FooterComponent,
     ProdutionWidgetComponent,
     ContaminationWidgetComponent,
     NextcollectionWidgetComponent,
