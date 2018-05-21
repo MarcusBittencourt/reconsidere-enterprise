@@ -1,4 +1,4 @@
-<div class="container h-100">
+<div class="container h-100" (keydown.enter)="login()">
   <div class="row h-100 justify-content-center align-items-center">
     <img src="./assets/reconsidere-logo.png" width="300px" height="50px" />
     <div class="col-md-5">
@@ -30,7 +30,7 @@
               </div>
             </div>
           </div>
-          <button (click)="login();" class="btn btn-block btn-success">
+          <button (click)="login()" class="btn btn-block btn-success">
             Entrar
             <span class="spacer"></span>
             <i *ngIf="entering" class="fa fa-spinner fa-spin"></i>
