@@ -31,7 +31,9 @@
             </div>
           </div>
           <button (click)="login();" class="btn btn-block btn-success">
-            Entrar<i *ngIf="entering" class="fa fa-spinner fa-spin"></i>
+            Entrar
+            <span class="spacer"></span>
+            <i *ngIf="entering" class="fa fa-spinner fa-spin"></i>
           </button>
           <div class="form-check small">
             <label class="form-check-label">
