@@ -1,0 +1,23 @@
+<div class="container h-100" (keydown.enter)="recover()">
+  <div class="row h-100 justify-content-center align-items-center">
+    <img src="./assets/reconsidere-logo.png" width="300px" height="50px" />
+    <div class="col-md-5">
+      <div class="card card-outline-secondary">
+        <div class="card-header">
+          <h3 class="mb-0">Recuperação de senha</h3>
+        </div>
+        <div class="card-body">
+          <div class="form-group">
+            <h3> Email </h3>
+            <input #email type="email" class="form-control" placeholder="usuario@exemplo.com.br">
+          </div>
+        </div>
+        <button (click)="recover()" class="btn btn-block btn-success">
+          Recuperar
+          <span class="spacer"></span>
+          <i *ngIf="recovering" class="fa fa-spinner fa-spin"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

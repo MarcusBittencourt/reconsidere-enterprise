@@ -50,6 +50,7 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {AngularFireDatabaseModule } from 'angularfire2/database';
 import { AuthGuard } from '../guards/auth.guard';
 import { LogoutComponent } from './logout/logout.component';
+import { ForgotpassComponent } from './forgotpass/forgotpass.component';
 
 
 @NgModule({
@@ -69,7 +70,8 @@ import { LogoutComponent } from './logout/logout.component';
     AdminComponent,
     SignUpComponent,
     SignInComponent,
-    LogoutComponent
+    LogoutComponent,
+    ForgotpassComponent
   ],
   imports: [
     MatSidenavModule,

@@ -11,10 +11,11 @@ import {SignUpComponent} from './sign-up/sign-up.component';
 import { SignInComponent } from './sign-in/sign-in.component';
 import { AuthGuard } from '../guards/auth.guard';
 import { LogoutComponent } from './logout/logout.component';
+import { ForgotpassComponent } from './forgotpass/forgotpass.component';
 
 export const routes: Routes = [
   { path: '', component: SignInComponent },
-  { path: 'sign-up', component: SignInComponent },
+  { path: 'sign-up', component: SignUpComponent },
   { path: 'sign-in', component: SignInComponent },
   { path: 'startcenter', component: StartcenterComponent, canActivate: [AuthGuard]},
   { path: 'profile', component: ProfileComponent, canActivate: [AuthGuard] },
@@ -23,6 +24,7 @@ export const routes: Routes = [
   { path: 'measurements', component: MeasurementsComponent, canActivate: [AuthGuard] },
   { path: 'updates', component: UpdatesComponent, canActivate: [AuthGuard] },
   { path: 'logout', component: LogoutComponent, canActivate: [AuthGuard] },
+  { path: 'forgotpass', component: ForgotpassComponent, canActivate: [AuthGuard] },
 ];
 
 export const ROUTING: ModuleWithProviders = RouterModule.forRoot(routes);
