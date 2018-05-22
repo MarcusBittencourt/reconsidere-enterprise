@@ -29,6 +29,7 @@ export class SignInComponent implements OnInit {
     .then(value => {
       this.auth.authenticated = true;
       if (this.credentials.remember) { this.rememberMe(); }
+      if (!this.credentials.remember) { this.forgotMe(); }
       this.router.navigate(['/startcenter']);
       console.log('Usuário autenticado com sucesso!');
     })
@@ -39,7 +40,14 @@ export class SignInComponent implements OnInit {
   }
 
   rememberMe() {
-    localStorage.setItem('userAuth', JSON.stringify(this.credentials));
+    let credentialsToSave: any;
+    credentialsToSave = this.credentials;
+    credentialsToSave.password = null;
+    localStorage.setItem('userAuth', JSON.stringify(credentialsToSave));
+  }
+
+  forgotMe() {
+    localStorage.removeItem('userAuth');
   }
 
 }
