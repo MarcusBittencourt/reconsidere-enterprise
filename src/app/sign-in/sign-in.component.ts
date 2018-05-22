@@ -9,24 +9,33 @@ import { AuthService } from '../../services/auth.service';
 })
 export class SignInComponent implements OnInit {
 
-  email: string;
-  password: string;
-  name: string;
+  credentials = { password: '', email: '', remember: false};
+  remember: boolean;
   hidepassword =  true;
   entering = false;
 
   constructor(private auth: AuthService, private router: Router) { }
 
   ngOnInit() {
+    if (localStorage.getItem('userAuth')) {
+      this.credentials = JSON.parse(localStorage.getItem('userAuth'));
+    }
   }
 
   login() {
     this.entering = true;
-    this.auth.login(this.email, this.password);
+    this.auth.login(this.credentials.email, this.credentials.password);
+    if (this.credentials.remember) {
+      this.rememberMe();
+    }
     if (!this.auth.user) {
       return;
     }
     this.router.navigate(['/startcenter']);
+  }
+
+  rememberMe() {
+    localStorage.setItem('userAuth', JSON.stringify(this.credentials));
   }
 
 }
