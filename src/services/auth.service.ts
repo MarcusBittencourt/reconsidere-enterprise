@@ -27,18 +27,9 @@ export class AuthService {
       });
     }
 
-  login(email: string, password: string) {
-    this.firebaseAuth
-      .auth
-      .signInWithEmailAndPassword(email, password)
-      .then(value => {
-        this.authenticated = true;
-        console.log('Usuário autenticado com sucesso!');
-      })
-      .catch(err => {
-        console.log('Autenticação de usuário inválida:', err.message);
-      });
-    }
+  login(email: string, password: string): Promise<boolean> {
+    return this.firebaseAuth.auth.signInWithEmailAndPassword(email, password);
+  }
 
   logout() {
     this.firebaseAuth.auth.signOut();

@@ -24,9 +24,18 @@ export class SignInComponent implements OnInit {
 
   login() {
     this.entering = true;
-    this.auth.login(this.credentials.email, this.credentials.password);
-    if (this.credentials.remember) { this.rememberMe(); }
-    this.router.navigate(['/startcenter']);
+    this.auth
+    .login(this.credentials.email, this.credentials.password)
+    .then(value => {
+      this.auth.authenticated = true;
+      if (this.credentials.remember) { this.rememberMe(); }
+      this.router.navigate(['/startcenter']);
+      console.log('Usuário autenticado com sucesso!');
+    })
+    .catch(err => {
+      console.log('Autenticação de usuário inválida:', err.message);
+    });
+
   }
 
   rememberMe() {
