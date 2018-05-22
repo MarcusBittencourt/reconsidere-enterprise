@@ -17,13 +17,13 @@ export const routes: Routes = [
   { path: '', component: SignInComponent },
   { path: 'sign-up', component: SignUpComponent },
   { path: 'sign-in', component: SignInComponent },
+  { path: 'logout', component: LogoutComponent },
   { path: 'startcenter', component: StartcenterComponent, canActivate: [AuthGuard]},
   { path: 'profile', component: ProfileComponent, canActivate: [AuthGuard] },
   { path: 'admin', component: AdminComponent, canActivate: [AuthGuard] },
   { path: 'dashboards', component: DashboardComponent, canActivate: [AuthGuard] },
   { path: 'measurements', component: MeasurementsComponent, canActivate: [AuthGuard] },
   { path: 'updates', component: UpdatesComponent, canActivate: [AuthGuard] },
-  { path: 'logout', component: LogoutComponent, canActivate: [AuthGuard] },
   { path: 'forgotpass', component: ForgotpassComponent, canActivate: [AuthGuard] },
 ];
 

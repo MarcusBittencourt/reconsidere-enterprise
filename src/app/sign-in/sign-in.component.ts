@@ -25,12 +25,7 @@ export class SignInComponent implements OnInit {
   login() {
     this.entering = true;
     this.auth.login(this.credentials.email, this.credentials.password);
-    if (this.credentials.remember) {
-      this.rememberMe();
-    }
-    if (!this.auth.user) {
-      return;
-    }
+    if (this.credentials.remember) { this.rememberMe(); }
     this.router.navigate(['/startcenter']);
   }
 

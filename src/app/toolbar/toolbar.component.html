@@ -44,7 +44,7 @@
       <span class="spacer"></span>
       <mat-icon>settings</mat-icon>
     </mat-list-item>
-    <mat-list-item class="option" routerLink="/logout" routerLinkActive="active">
+    <mat-list-item (click)="auth.logout()" class="option" routerLink="/logout" routerLinkActive="active">
       <span class="d-none d-lg-block">Sair</span>
       <span class="spacer"></span>
       <mat-icon>code</mat-icon>

@@ -8,7 +8,7 @@ import { Observable } from 'rxjs/Observable';
 export class AuthService {
 
   user: Observable<firebase.User>;
-  authenticated: boolean;
+  authenticated = false;
 
   constructor(private router: Router, private firebaseAuth: AngularFireAuth) {
     this.user = firebaseAuth.authState;
@@ -41,10 +41,9 @@ export class AuthService {
     }
 
   logout() {
-    this.firebaseAuth
-    .auth
-    .signOut();
+    this.firebaseAuth.auth.signOut();
     this.authenticated = false;
+    console.log('Deslogado com sucesso!');
   }
 
   isAuthenticated(): any {
