@@ -51,6 +51,9 @@ import {AngularFireDatabaseModule } from 'angularfire2/database';
 import { AuthGuard } from '../guards/auth.guard';
 import { LogoutComponent } from './logout/logout.component';
 import { ForgotpassComponent } from './forgotpass/forgotpass.component';
+import { CollectStepsComponent } from './collect-steps/collect-steps.component';
+import { TransferredComponent } from './transferred/transferred.component';
+import { TermFilterPipe } from '../pipes/term-filter.pipe';
 
 
 @NgModule({
@@ -71,7 +74,10 @@ import { ForgotpassComponent } from './forgotpass/forgotpass.component';
     SignUpComponent,
     SignInComponent,
     LogoutComponent,
-    ForgotpassComponent
+    ForgotpassComponent,
+    CollectStepsComponent,
+    TransferredComponent,
+    TermFilterPipe
   ],
   imports: [
     MatSidenavModule,

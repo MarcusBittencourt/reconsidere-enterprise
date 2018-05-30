@@ -1,3 +1,4 @@
+import { TransferredComponent } from './transferred/transferred.component';
 import { MeasurementsComponent } from './measurements/measurements.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AdminComponent } from './admin/admin.component';
@@ -14,17 +15,23 @@ import { LogoutComponent } from './logout/logout.component';
 import { ForgotpassComponent } from './forgotpass/forgotpass.component';
 
 export const routes: Routes = [
+  //SEUCURITY
   { path: '', component: SignInComponent },
   { path: 'sign-up', component: SignUpComponent },
   { path: 'sign-in', component: SignInComponent },
   { path: 'logout', component: LogoutComponent },
-  { path: 'startcenter', component: StartcenterComponent, canActivate: [AuthGuard]},
-  { path: 'profile', component: ProfileComponent, canActivate: [AuthGuard] },
+  { path: 'forgotpass', component: ForgotpassComponent },
+  //GENERIC BUSINESS
   { path: 'admin', component: AdminComponent, canActivate: [AuthGuard] },
+  { path: 'startcenter', component: StartcenterComponent, canActivate: [AuthGuard]},
   { path: 'dashboards', component: DashboardComponent, canActivate: [AuthGuard] },
+  { path: 'profile', component: ProfileComponent, canActivate: [AuthGuard] },
+  //COOPERATIVE
+  { path: 'transfers', component: TransferredComponent, canActivate: [AuthGuard] },
+  //ENTERPRISE
   { path: 'measurements', component: MeasurementsComponent, canActivate: [AuthGuard] },
   { path: 'updates', component: UpdatesComponent, canActivate: [AuthGuard] },
-  { path: 'forgotpass', component: ForgotpassComponent, canActivate: [AuthGuard] },
+  //PROJECT
 ];
 
 export const ROUTING: ModuleWithProviders = RouterModule.forRoot(routes);
