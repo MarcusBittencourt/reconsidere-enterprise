@@ -54,7 +54,7 @@ import { ForgotpassComponent } from './forgotpass/forgotpass.component';
 import { CollectStepsComponent } from './collect-steps/collect-steps.component';
 import { TransferredComponent } from './transferred/transferred.component';
 import { TermFilterPipe } from '../pipes/term-filter.pipe';
-
+import {NgxMaskModule} from 'ngx-mask';
 
 @NgModule({
   declarations: [
@@ -80,6 +80,7 @@ import { TermFilterPipe } from '../pipes/term-filter.pipe';
     TermFilterPipe
   ],
   imports: [
+    NgxMaskModule.forRoot(),
     MatSidenavModule,
     BrowserAnimationsModule,
     BrowserModule,

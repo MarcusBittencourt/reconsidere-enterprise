@@ -48,6 +48,7 @@
     "jquery": "^3.3.1",
     "mdbootstrap": "^4.4.4",
     "ng2-charts": "^1.6.0",
+    "ngx-mask": "^2.9.6",
     "npm": "^5.7.1",
     "rxjs": "^5.5.6",
     "typescript": "~2.5.3",
