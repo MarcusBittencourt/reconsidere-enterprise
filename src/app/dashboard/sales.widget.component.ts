@@ -1,18 +1,17 @@
 import { Component, OnInit, NgModule } from '@angular/core';
 
 @Component({
-  // tslint:disable-next-line:component-selector
-  selector: 'widget-nextcollection',
-  templateUrl: './nextcollection.widget.component.html',
+  selector: 'widget-sales',
+  templateUrl: './sales.widget.component.html',
   styleUrls: ['./default.widget.component.css']
 })
 @NgModule({})
-export class NextcollectionWidgetComponent implements OnInit {
+export class SalesWidgetComponent implements OnInit {
 
   public percent_result = 0;
   public text_result = 'Nenhum crescimento';
   public doughnutChartLabels = ['Reciclável', 'Não Reciclável'];
-  public doughnutChartData = [20, 80];
+  public doughnutChartData = [67, 33];
   public doughnutChartType = 'doughnut';
   public doughnutOptions = {
     responsive: true,
@@ -22,12 +21,11 @@ export class NextcollectionWidgetComponent implements OnInit {
     },
     cutoutPercentage: 65,
   };
-
   public doughnutChartColors: any[] = [
     {
         backgroundColor: [
-          'rgba(237, 44, 18, 1.0)',
-          'rgba(237, 44, 18, 0.2)'
+          'rgba(247, 181, 27, 1.0)',
+          'rgba(247, 181, 27, 0.2)'
         ]
     }
   ];
@@ -43,5 +41,6 @@ export class NextcollectionWidgetComponent implements OnInit {
   public chartHovered(e: any): void {
     console.log(e);
   }
+
 
 }

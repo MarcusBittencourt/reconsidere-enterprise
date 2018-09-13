@@ -6,8 +6,7 @@
   <mat-card-content>
     <div class="row">
       <div class="col-4">
-        <canvas
-        baseChart
+        <canvas baseChart
         [data]="doughnutChartData"
         [labels]="doughnutChartLabels"
         [chartType]="doughnutChartType"
@@ -16,22 +15,22 @@
         (chartHover)="chartHovered($event)"
         (chartClick)="chartClicked($event)"
         style="width: 100%; height: 100%">
-      </canvas>
-    </div>
-    <div class="col-8">
-      <h3>Coletas</h3>
-      <p>
-      <div class="row">
-        <div class="col-3">
-            <div *ngIf="false" class="negative_triangle"></div>
-            <div class="positive_triangle"></div>
-        </div>
-        <div class="col-9">
-          {{percent_result}}% {{text_result}}
-        </div>
+        </canvas>
+      </div>
+      <div class="col-8">
+          <h3>Domicílios</h3>
+          <p>
+          <div class="row">
+            <div class="col-3">
+                <div *ngIf="false" class="negative_triangle"></div>
+                <div class="positive_triangle"></div>
+            </div>
+            <div class="col-9">
+              {{percent_result}}% {{text_result}}
+            </div>
+          </div>
       </div>
     </div>
-  </div>
   </mat-card-content>
   <mat-card-actions></mat-card-actions>
 </mat-card>

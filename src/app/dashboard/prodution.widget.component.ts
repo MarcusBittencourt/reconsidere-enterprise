@@ -15,7 +15,6 @@ export class ProdutionWidgetComponent implements OnInit {
   public doughnutChartData = [339, 102];
   public doughnutChartType = 'doughnut';
 
-  // events
   public chartClicked(e: any): void {
     console.log(e);
   }

@@ -8,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ToolbarComponent implements OnInit {
 
+  show_title = false;
+
   constructor(public auth: AuthService) { }
 
   ngOnInit() {

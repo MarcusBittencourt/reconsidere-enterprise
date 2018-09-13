@@ -1,18 +1,17 @@
 import { Component, OnInit, NgModule } from '@angular/core';
 
 @Component({
-  // tslint:disable-next-line:component-selector
-  selector: 'widget-nextcollection',
-  templateUrl: './nextcollection.widget.component.html',
+  selector: 'widget-households',
+  templateUrl: './households.widget.component.html',
   styleUrls: ['./default.widget.component.css']
 })
 @NgModule({})
-export class NextcollectionWidgetComponent implements OnInit {
+export class HouseholdsWidgetComponent implements OnInit {
 
   public percent_result = 0;
   public text_result = 'Nenhum crescimento';
   public doughnutChartLabels = ['Reciclável', 'Não Reciclável'];
-  public doughnutChartData = [20, 80];
+  public doughnutChartData = [7989, 148000];
   public doughnutChartType = 'doughnut';
   public doughnutOptions = {
     responsive: true,
@@ -26,11 +25,12 @@ export class NextcollectionWidgetComponent implements OnInit {
   public doughnutChartColors: any[] = [
     {
         backgroundColor: [
-          'rgba(237, 44, 18, 1.0)',
-          'rgba(237, 44, 18, 0.2)'
+          'rgba(148, 247, 143, 1.0)',
+          'rgba(75, 244, 66, 1.0)'
         ]
     }
   ];
+
   constructor() { }
 
   ngOnInit() {

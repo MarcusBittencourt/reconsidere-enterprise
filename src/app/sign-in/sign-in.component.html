@@ -10,7 +10,7 @@
           <div class="form-group">
             <h3> Usuário </h3>
             <input #username required
-              type="email"
+              type="text"
               class="form-control"
               credentials="ngModel"
               [(ngModel)]="credentials.email"
@@ -48,7 +48,7 @@
           <div class="form-check small">
             <label class="form-check-label">
               <input type="checkbox" class="form-check-input" [(ngModel)]="credentials.remember" [value]="credentials.remember">
-              <span>Lembrar minha senha neste computador</span>
+              <span>Lembrar meu usuário neste computador</span>
             </label>
           </div>
           <a routerLink="/sign-up">Criar conta</a>

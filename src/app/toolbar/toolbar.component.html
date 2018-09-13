@@ -1,57 +1,51 @@
 <div class="sidenav" #sidenav>
-  <p class="d-none d-lg-block">Reconsidere</p>
   <mat-list>
     <mat-list-item class="option" routerLink="/startcenter" routerLinkActive="active">
-      <span class="d-none d-lg-block">Central</span>
-      <span class="spacer"></span>
-      <mat-icon>dashboard</mat-icon>
+      <span class="d-none d-lg-block" *ngIf="show_title">Central</span>
+      <span class="spacer" *ngIf="show_title"></span>
+      <i class="fa fa-columns fa-2x" aria-hidden="true"></i>
     </mat-list-item>
-    <mat-list-item class="option">
-        <span class="d-none d-lg-block">Atividades</span>
-      <span class="spacer"></span>
-      <mat-icon>code</mat-icon>
+    <mat-list-item class="option" routerLink="/schedule" routerLinkActive="active">
+      <span class="d-none d-lg-block" *ngIf="show_title">Calendário</span>
+      <span class="spacer" *ngIf="show_title"></span>
+      <i class="fa fa-calendar fa-2x" aria-hidden="true"></i>
     </mat-list-item>
-    <mat-list-item class="option" routerLink="/measurements" routerLinkActive="active">
-      <span class="d-none d-lg-block">Apontamento</span>
-      <span class="spacer"></span>
-      <mat-icon>code</mat-icon>
+    <mat-list-item class="option" routerLink="/transfers" routerLinkActive="active" *ngIf="false">
+      <span class="d-none d-lg-block" *ngIf="show_title">Translados</span>
+      <span class="spacer" *ngIf="show_title"></span>
+      <i class="fa fa-car fa-2x" aria-hidden="true"></i>
     </mat-list-item>
     <mat-list-item class="option" routerLink="/weighing" routerLinkActive="active">
-      <span class="d-none d-lg-block">Medição</span>
-      <span class="spacer"></span>
-      <mat-icon>bar_chart</mat-icon>
+      <span class="d-none d-lg-block" *ngIf="show_title">Medição</span>
+      <span class="spacer" *ngIf="show_title"></span>
+      <i class="fa fa-bar-chart fa-2x" aria-hidden="true"></i>
     </mat-list-item>
-    <mat-list-item class="option" routerLink="/planning" routerLinkActive="active">
-      <span class="d-none d-lg-block">Planejamento</span>
-      <span class="spacer"></span>
-      <mat-icon>code</mat-icon>
+    <mat-list-item class="option" routerLink="/tracking" routerLinkActive="active">
+      <span class="d-none d-lg-block" *ngIf="show_title">Rastreamento</span>
+      <span class="spacer" *ngIf="show_title"></span>
+      <i class="fa fa-qrcode fa-2x"></i>
     </mat-list-item>
-    <mat-list-item class="option" routerLink="/lifecycle" routerLinkActive="active">
-      <span class="d-none d-lg-block">Ciclo de Vida</span>
-      <span class="spacer"></span>
-      <mat-icon>code</mat-icon>
+    <mat-list-item class="option" routerLink="/reports" routerLinkActive="active">
+      <span class="d-none d-lg-block" *ngIf="show_title">Relatórios</span>
+      <span class="spacer" *ngIf="show_title"></span>
+      <i class="fa fa-file-text-o fa-2x" aria-hidden="true"></i>
     </mat-list-item>
-    <mat-list-item class="option" routerLink="/transfers" routerLinkActive="active">
-      <span class="d-none d-lg-block">Translados</span>
-      <span class="spacer"></span>
-      <mat-icon>code</mat-icon>
-    </mat-list-item>
-    <mat-list-item></mat-list-item>
-    <mat-list-item></mat-list-item>
-    <mat-list-item class="option" routerLink="/profile" routerLinkActive="active">
-      <span class="d-none d-lg-block">Conta</span>
-      <span class="spacer"></span>
-      <mat-icon>account_box</mat-icon>
-    </mat-list-item>
-    <mat-list-item class="option" routerLink="/admin" routerLinkActive="active">
-      <span class="d-none d-lg-block">Administração</span>
-      <span class="spacer"></span>
-      <mat-icon>settings</mat-icon>
-    </mat-list-item>
-    <mat-list-item (click)="auth.logout()" class="option" routerLink="/logout" routerLinkActive="active">
-      <span class="d-none d-lg-block">Sair</span>
-      <span class="spacer"></span>
-      <mat-icon>code</mat-icon>
-    </mat-list-item>
+    <div class="align-self-end">
+      <mat-list-item class="option align-self-end" routerLink="/profile" routerLinkActive="active">
+        <span class="d-none d-lg-block" *ngIf="show_title">Conta</span>
+        <span class="spacer" *ngIf="show_title"></span>
+        <i class="fa fa-user-circle fa-2x"></i>
+      </mat-list-item>
+      <mat-list-item class="option align-self-end" routerLink="/admin" routerLinkActive="active">
+        <span class="d-none d-lg-block" *ngIf="show_title">Administração</span>
+        <span class="spacer" *ngIf="show_title"></span>
+        <i class="fa fa-cogs fa-2x"></i>
+      </mat-list-item>
+      <mat-list-item class="option align-self-end" routerLink="/logout" routerLinkActive="active" (click)="auth.logout()">
+        <span class="d-none d-lg-block" *ngIf="show_title">Sair</span>
+        <span class="spacer" *ngIf="show_title"></span>
+        <i class="fa fa-sign-out fa-2x" aria-hidden="true"></i>
+      </mat-list-item>
+    </div>
   </mat-list>
 </div>

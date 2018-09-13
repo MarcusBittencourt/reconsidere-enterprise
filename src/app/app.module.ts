@@ -1,3 +1,5 @@
+import {CalendarModule} from 'angular-calendar';
+import { ScheduleComponent } from './schedule/schedule.component';
 import { environment } from './../environments/environment.prod';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -46,7 +48,7 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
 import { AuthService } from '../services/auth.service';
 
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import {NgbModule, NgbModalModule, NgbTabsetConfig} from '@ng-bootstrap/ng-bootstrap';
 import {AngularFireDatabaseModule } from 'angularfire2/database';
 import { AuthGuard } from '../guards/auth.guard';
 import { LogoutComponent } from './logout/logout.component';
@@ -55,9 +57,15 @@ import { CollectStepsComponent } from './collect-steps/collect-steps.component';
 import { TransferredComponent } from './transferred/transferred.component';
 import { TermFilterPipe } from '../pipes/term-filter.pipe';
 import {NgxMaskModule} from 'ngx-mask';
+import { TransitSchedulerComponent } from './transit-scheduler/transit-scheduler.component';
+import { CodegenComponent } from './codegen/codegen.component';
+import { SalesWidgetComponent } from './dashboard/sales.widget.component';
+import { HouseholdsWidgetComponent } from './dashboard/households.widget.component';
+import { NgxQRCodeModule } from 'ngx-qrcode2';
 
 @NgModule({
   declarations: [
+    TransitSchedulerComponent,
     AppComponent,
     ToolbarComponent,
     MeasurementsComponent,
@@ -77,15 +85,21 @@ import {NgxMaskModule} from 'ngx-mask';
     ForgotpassComponent,
     CollectStepsComponent,
     TransferredComponent,
-    TermFilterPipe
+    TermFilterPipe,
+    TransitSchedulerComponent,
+    CodegenComponent,
+    SalesWidgetComponent,
+    HouseholdsWidgetComponent,
+    ScheduleComponent
   ],
   imports: [
+    NgbModule,
+    NgxQRCodeModule,
+    FormsModule,
     NgxMaskModule.forRoot(),
     MatSidenavModule,
     BrowserAnimationsModule,
     BrowserModule,
-    MatSliderModule,
-    FormsModule,
     MatToolbarModule,
     MatGridListModule,
     MatListModule,
@@ -101,23 +115,18 @@ import {NgxMaskModule} from 'ngx-mask';
     MatDividerModule,
     MatRadioModule,
     ChartsModule,
-    MatFormFieldModule,
-    MatStepperModule,
     MatTableModule,
     ProdutionWidgetComponent,
     ContaminationWidgetComponent,
     NextcollectionWidgetComponent,
     PreselectionWidgetComponent,
     CultureWidgetComponent,
-    FlexLayoutModule,
     AngularFireModule.initializeApp(environment.firebase),
-    NgbModule.forRoot(),
     AngularFireDatabaseModule,
-    FormsModule,
     AngularFireAuthModule,
-    ROUTING
+    ROUTING,
   ],
-  providers: [AngularFireDatabase, AuthService, AuthGuard, {provide: APP_BASE_HREF, useValue: '/' }],
+  providers: [AngularFireDatabase, AuthService, AuthGuard, {provide: APP_BASE_HREF, useValue: '/' }, NgbTabsetConfig],
   bootstrap: [AppComponent]
 })
 export class AppModule {

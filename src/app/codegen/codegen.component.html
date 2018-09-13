@@ -1,0 +1,47 @@
+<app-toolbar></app-toolbar>
+<div class="main">
+  <ngb-tabset type="pills">
+    <ngb-tab title="Criação">
+      <ng-template ngbTabContent>
+        <div class="row h-10">
+          <div class="col-3">
+            <label>Quantidade:</label>
+            <input class="form-control" type="number" [(ngModel)]="quantity" />
+          </div>
+          <div class="col-3">
+            <label>Material:</label>
+            <input class="form-control" type="text" [(ngModel)]="material" />
+          </div>
+          <div class="col-3">
+            <label>Empresa:</label>
+            <input class="form-control" type="text" [(ngModel)]="enterprise" />
+          </div>
+          <div class="col-3">
+            <button class="btn btn-success form-control" (click)="createQRCodes()">Criar</button>
+          </div>
+        </div>
+      </ng-template>
+    </ngb-tab>
+    <ngb-tab>
+      <ng-template ngbTabTitle>
+        <b>Gerenciar Existentes</b>
+      </ng-template>
+      <ng-template ngbTabContent>
+        <div class="row">
+          <mat-card *ngFor="let code of codes | async">
+            <mat-card-header>
+              {{code.creationDate}} | {{code.status}}
+            </mat-card-header>
+            <mat-card-content>
+              <ngx-qrcode [qrc-element-type]="type" [qrc-value]="code.url"></ngx-qrcode>
+            </mat-card-content>
+            <mat-card-footer>
+              <button class="btn btn-default" (click)="track(code.key)">Rastrear</button>
+              <button class="btn btn-danger" (click)="discontinue(code.key, code)">Descontinuar</button>
+            </mat-card-footer>
+          </mat-card>
+        </div>
+      </ng-template>
+    </ngb-tab>
+  </ngb-tabset>
+</div>
